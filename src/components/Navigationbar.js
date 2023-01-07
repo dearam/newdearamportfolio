@@ -7,8 +7,7 @@ import { RiPagesLine } from "react-icons/ri";
 import { TiContacts } from "react-icons/ti";
 
 import { BsPencilSquare } from "react-icons/bs";
-import {Routes,Route,Link} from "react-router-dom"
-import Home from './Home';
+import {Link} from "react-router-dom"
 
 function Navigationbar() {
   return (

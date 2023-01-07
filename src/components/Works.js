@@ -8,7 +8,7 @@ const INITIAL_LIST = Array.from({ length: 75 }, () => false);
 const COUNT_LIST = Array.from({ length: 75 }, () => 0);
 
 function Works() {
-  const [list, setList] = useState(INITIAL_LIST)
+  const [list] = useState(INITIAL_LIST)
 
   const [userinfo, setUserInfo] = useState({
     gettingdatas: [],
@@ -19,7 +19,7 @@ function Works() {
   const handleOnChange = (e,name,i) => {
 
     const { checked } = e.target;
-    const { gettingdatas,resposedatas} = userinfo;
+    const { gettingdatas} = userinfo;
     const passdata=name;
     if (checked) {
       COUNT_LIST[i]+=1;
@@ -31,8 +31,8 @@ function Works() {
     else {
       COUNT_LIST[i]-=1;
       setUserInfo({
-        gettingdatas: gettingdatas.filter((e) => e != passdata),
-        response: gettingdatas.filter((e) => e != passdata),
+        gettingdatas: gettingdatas.filter((e) => e !== passdata),
+        response: gettingdatas.filter((e) => e !== passdata),
       });
     }
     if(COUNT_LIST[i]>0){
@@ -144,11 +144,6 @@ const RButton=styled.div`
     background-color: #fff;
     color: #05aa6c;
   }
-`;
-const Elements=styled.div`
-  position: relative;
-  height: 100%;
-  width: 100%;
 `;
 const Content=styled.div`
     left: 20px;

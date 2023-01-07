@@ -8,7 +8,7 @@ import { DiJavascript } from "react-icons/di";
 
 function Home() {
   return (
-    <>
+    <div>
     <Homepage>
       <Right>
         <Content>
@@ -79,7 +79,7 @@ function Home() {
         
       </Left>
     </Homepage>
-    </>
+    </div>
   )
 }
 

@@ -8,7 +8,7 @@ import { DiJavascript } from "react-icons/di";
 
 function Home() {
   return (
-    <>
+    <div>
     <Homepage>
       <Right>
         <Content>
@@ -79,7 +79,7 @@ function Home() {
         
       </Left>
     </Homepage>
-    </>
+    </div>
   )
 }
 
@@ -369,7 +369,7 @@ const Homepage=styled.div`
   position: absolute;
   width: 95%;
   display: flex;
-  background-color: #111;
+  background-image: linear-gradient(#232140,#d7d6dc);
   left: 5%;
   @media (max-width:768px){
       left: 0;

@@ -11,6 +11,7 @@ import { Routes,Route} from 'react-router-dom';
 
 
 function App() {
+
   return (
     <div>
       <Navigationbar/>
@@ -21,7 +22,6 @@ function App() {
         <Route path="/works" element={<Works/>}/>
         <Route path="/contact" element={<Contact/>}/>
       </Routes>
-        
     </div>
   );
 }

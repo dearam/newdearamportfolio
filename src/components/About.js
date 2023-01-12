@@ -30,10 +30,6 @@ function About() {
         <Para3>
         Being a diligent, hardworking and result oriented Boy, I always work towards achieving best result on each project I lay my hands on.
         </Para3>
-        
-
-        
-        
       </Content>
       </Left>
 

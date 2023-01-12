@@ -7,45 +7,55 @@ import { RiPagesLine } from "react-icons/ri";
 import { TiContacts } from "react-icons/ti";
 
 import { BsPencilSquare } from "react-icons/bs";
-import {Link} from "react-router-dom"
+import {NavLink,Link} from "react-router-dom"
+import '../App.css'
 
 function Navigationbar() {
+
+   // var btns=btnContainer.getElementsByClassName("list");
+    // for(var i=0;i<btns.length;i++){
+    //     btns[i].addEventListener('click',function(){
+    //         var current=document.getElementsByClassName("active");
+    //         current[0].className=current[0].className.replace("active");
+    //         this.className+="active";
+    //     })
+    // }
   return (
         <NavMenu>
             <Bitemoji>
                 <img src='./images/bitemo.png' alt="dearam"/>
             </Bitemoji>
             <Grid>
-                    <Link to="/">
-                        <Content>
+                <NavLink  to="/" className="normal" style={({isActive})=>{return {color: isActive?'blue':''}}}>
+                        <Content >
                             <BiHomeSmile className='home'/>
                             <Name>Home</Name>
                         </Content>
-                    </Link>
-                <Link to="/about">
-                    <Content>
+                    </NavLink>
+                <NavLink  to="/about" className="normal" style={({isActive})=>{return {color: isActive?'blue':''}}}>
+                    <Content >
                         <RiPagesLine className='home'/>
                         <Name>About</Name>
                     </Content>
-                </Link>
-                <Link to="/bio">
-                    <Content>
+                </NavLink>
+                <NavLink  to="/bio" className="normal" style={({isActive})=>{return {color: isActive?'blue':''}}}>
+                    <Content >
                         <BsPencilSquare className='home'/>
                         <Name>Bio</Name>
                     </Content>
-                </Link>
-                <Link to="/works">
-                    <Content>
+                </NavLink>
+                <NavLink  to="/works" className="normal" style={({isActive})=>{return {color: isActive?'blue':''}}}>
+                    <Content >
                         <FiBriefcase className='home'/>
                         <Name>Works</Name>
                     </Content>
-                </Link>
-                <Link to="contact">
+                </NavLink>
+                <NavLink  to="contact" className="normal" style={({isActive})=>{return {color: isActive?'blue':''}}}>
                     <Content>
                         <TiContacts className='home'/>
                         <Name>Contact</Name>
                     </Content>
-                </Link>  
+                </NavLink>  
             </Grid>
         </NavMenu>
   )
@@ -89,7 +99,12 @@ const Grid=styled.div`
     height: 50%;
     fill: #ffffff;
     stroke: #ffffff;
-    a{
+    .selected {
+        background-color: gold;
+        color:Black ;
+        font-weight:bold;
+    }
+    .normal{
         color: #ffffff;
         justify-content: center;
         align-items: center;
@@ -101,6 +116,9 @@ const Grid=styled.div`
             position: relative;
             width: 30px;
         }
+    }
+    .normal .active{
+        color: blue;
     }
     @media (max-width:768px){
         left: 15%;
@@ -116,6 +134,9 @@ const Name=styled.div`
     font-weight: 500;
     position: absolute;
     left: 20%;
+    transition: 0.5s;
+    opacity: 0;
+    
     @media (max-width:1000px){
         font-size: 10px;
     }
@@ -127,7 +148,6 @@ const Content=styled.div`
         width: 60px;
         height: 100%;
         justify-content: center;
-        color: #ffffff; 
         &:hover{
             opacity: 5;
             color: #9E3FFD;

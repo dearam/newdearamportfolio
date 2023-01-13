@@ -11,8 +11,24 @@ function Bio() {
           <Box>
             <Content>
               <img src='./images/cardimg.jpg'/>
-              <Shade/>
-              
+              <Shade>
+              <Svgname>
+              <svg viewBox="0 0 74 14">
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="Artboard" transform="translate(-9.000000, -7.000000)">
+                          <g id="Group-2" transform="translate(9.000000, 7.000000)">
+                              <rect id="Rectangle" fill="none" x="0" y="0" width="74" height="14" rx="4"></rect>
+                              <g id="Group" transform="translate(4.000000, 3.500000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <path class="path" d="M 0.546 6.161 L 0.546 0.161 L 2.546 0.161 C 3.65 0.161 4.546 1.056 4.546 2.161 C 4.546 3.266 3.65 4.161 2.546 4.161 L 0.546 4.161 L 2.546 4.161 L 4.546 6.161" id="r" stroke="#9E3FFD" transform="matrix(1, 0, 0, 1, 4, 3.5)"></path> 
+                                <path class="path" d="M 8.093 6.33 L 8.093 2.33 C 8.093 1.226 8.988 0.33 10.093 0.33 C 11.197 0.33 12.093 1.226 12.093 2.33 L 12.093 6.33 L 12.093 4.33 L 8.093 4.33" id="a" stroke="#FFf" transform="matrix(1, 0, 0, 1, 4, 3.5)"></path> 
+                                <polyline class="path" id="m" stroke="#9E3FFD" points="21.936 0.458 21.936 6.458 18.936 3.458 15.936 6.458 15.936 0.458" transform="matrix(-1, 0, 0, -1, 41.872003, 10.416)"></polyline> 
+                              </g>
+                          </g>
+                      </g>
+                  </g>
+               </svg>
+              </Svgname>
+              </Shade>
             </Content>
           </Box>
         </Border>
@@ -37,10 +53,171 @@ function Bio() {
         </Title>
       </Right>
       <Left>
+        <Maincard>
+          <Mtitle>
+            who
+            <Iletter>I</Iletter>
+            am</Mtitle>
+          <Mbox>
+          <Bar>
+            <Scroll>
+            <div className="i-title-wrapper">
+              <div className="i-title-item">UI Designer</div>
+              <div className="i-title-item">Photographer</div>
+              <div className="i-title-item">Artist</div>
+              <div className="i-title-item">Analyist</div>
+              <div className="i-title-item">Guitarist</div>
+              <div className="i-title-item">Video Editor</div>
+            </div>
+            </Scroll>
+            <Collection>
+            <Circle></Circle>
+            <Circle></Circle>
+            <Circle></Circle></Collection>
+          </Bar>
+          <BContent>
+            <Para1>
+              I'm Ram Prasath, a Enginnering student IT department at PSNA. I'm passionate
+              about leveraging my diverse backgrounds to decipher challenging problems and create delightful experiences. I honed my skills at web development, Python, Flutter and UI designer.
+              </Para1>
+              <Para2>
+              I develop websites with . I have top skills in using design softwares like
+              Figma, Adobe XD and PhotoShop.I'm also interested in problem & and Machine learning.
+              </Para2>
+              <Para3>
+              Being a diligent, hardworking and result oriented Boy, I always work towards achieving best result on each project I lay my hands on.
+              </Para3>
+          </BContent>
+          </Mbox>
+        </Maincard>
       </Left>
     </Biopage>
   )
 }
+
+const Scroll=styled.div`
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  left: 10px;
+  font-size: 14px;
+  height: 100%;
+  overflow: hidden;
+  width: 25%;
+  color: #9E3FFD;
+  .i-title-wrapper{
+    position: relative;
+    left: 10px;
+    height: 100%;
+    animation: move 10s ease-in-out infinite alternate;
+  }
+  .i-title-item{
+    height: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #9E3FFD;
+    display: flex;
+    align-items: center;
+  }
+  @keyframes move{
+      25%{
+          transform: translateY(-50px);
+      }
+      50%{
+          transform: translateY(-100px);
+      }
+      75%{
+          transform: translateY(-150px);
+      }
+      100%{
+          transform: translateY(-200px);
+      }
+  }
+`;
+const Para1=styled.div`
+  padding: 15px;
+`;
+const Para2=styled.div`
+padding: 15px;
+`;
+const Para3=styled.div`
+position: relative;
+width: 90%;
+padding: 15px;`; 
+const BContent=styled.div`
+  position: relative;
+  height: 90%;
+  width: 100%;
+  border-radius: 5px 5px 5px 150px; 
+  font-size: 14px;
+  color:#fff;
+  display: flex;
+  flex-direction: column;
+  font-family: poppins;
+  font-weight: 400;
+  font-style: light;
+  margin: 10px;
+`;
+const Collection=styled.div`
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  width: 50%;
+  align-items: center;
+  right: 10px;
+  position: relative;
+  gap: 10px;
+`;
+const Circle=styled.div`
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  &:hover{
+    background-color: #fff;
+  }
+`;
+const Mbox=styled.div`
+  background-color: #0a012a;
+  position: relative;
+  height: 80%;
+  margin-top: 10px;
+  width: 95%;
+  left: 5%;
+  border-radius: 5px 5px 5px 120px;
+  border: 2px solid #fff;
+`;
+const Bar=styled.div`
+  display: flex;
+  width:99.5%;
+  height: 10%;
+  border:2px solid #fff;
+`;
+const Maincard=styled.div`
+  height: 70%;
+  width: 90%;
+  top: 3%;
+  position: relative;
+  font-family: poppins;
+  font-weight: 500;
+  font-size: 30px;
+`;
+const Mtitle=styled.div`
+  display: flex;
+  gap: 10px;
+  position: relative;
+  left: 5%;
+  color: #9E3FFD;
+  width: 30%;
+`;
+const Iletter=styled.div`
+  font-family: 'Dancing Script';
+  font-weight: 600;
+  color: #fff;
+  font-style: bold;
+`;
 
 const Biopage=styled.div`
   position: absolute;
@@ -66,7 +243,7 @@ const Right=styled.div`
   }
 `;
 const Left=styled.div`
-  flex: 1;
+  flex: 1.5;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -94,7 +271,7 @@ const Border=styled.div`
   position: relative;
   left: 10%;
   height: 80%;
-  width: 55%;
+  width:70%;
   border: 2px solid #fff;
   border-width:0px 2px 2px 2px;
   border-radius: 0px 0px 1000px 1000px;
@@ -128,7 +305,6 @@ const Content=styled.div`
   img{
     height: 100%;
     object-fit: cover;
-    z-index: 1;
     top: 10px;
     position: relative;
     inset: 0;
@@ -155,7 +331,7 @@ const Title=styled.div`
   width: 40px;
   position: absolute;
   top: 0;
-  left: 33%;
+  left: 32.5%;
   font-size: 35px;
   justify-content: center;
   display: flex;
@@ -168,5 +344,74 @@ const About=styled.div`
 `;
 const Me=styled.div`
   color: #0a012a;
+`;
+const Svgname=styled.div`
+  display: flex;
+  height: 500px;
+  width: 300px;
+  position: relative;
+  justify-content: center;
+  align-items: flex-end;
+  display: flex;
+  opacity: 0;
+  svg {
+    position: relative;
+    top: 0%;
+    left: 70%;
+    width: 600px;
+    height: 80px;
+    transform: translate(-50%, -50%);
+  }
+
+  .path {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 100%;
+  }
+
+  .path:nth-child(10) {
+    animation-delay: -2s;
+  }
+  .path:nth-child(9) {
+    animation-delay: -1.75s;
+  }
+  .path:nth-child(8) {
+    animation-delay: -1.5s;
+  }
+  .path:nth-child(7) {
+    animation-delay: -1.5s;
+  }
+  .path:nth-child(6) {
+    animation-delay: -1.25s;
+  }
+  .path:nth-child(5) {
+    animation-delay: -1s;
+  }
+  .path:nth-child(4) {
+    animation-delay: -0.75s;
+  }
+  .path:nth-child(3) {
+    animation-delay: -1.25s;
+  }
+  .path:nth-child(2) {
+    animation-delay: -0.25s;
+  }
+
+  @keyframes dash {
+    0%,
+    50% {
+      stroke-dashoffset: 100%;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+}
+;
+&:hover{
+  opacity: 0;
+  .path{
+    animation: dash 2.5s linear;
+  }
+}
+
 `;
 export default Bio

@@ -141,6 +141,7 @@ const Maintitle=styled.div`
   font-weight: 600;
   font-style: bold;
 `;
+
 const Para1=styled.div`
   font-family: poppins;
   font-weight: 400;

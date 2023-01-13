@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import './title.scss'
 
 function Bio() {
   return (
@@ -10,18 +11,30 @@ function Bio() {
           <Box>
             <Content>
               <img src='./images/cardimg.jpg'/>
-              <Title>
-                <About>
-                  About Me
-                </About>
-                <Rotate>
-                
-                </Rotate>
-              </Title>
+              <Shade/>
+              
             </Content>
-          
           </Box>
         </Border>
+        <Title>
+          <div class="title-inner">
+            <div class="cafe">
+              <div class="cafe-inner">
+                <About>
+                  <div>A</div>
+                  <div>B</div>
+                  <div>O</div>
+                  <div>U</div>
+                  <div>T</div>
+                </About>
+                <Me>
+                  <div>M</div>
+                  <div>E</div>
+                </Me>
+                </div>
+            </div>
+          </div>
+        </Title>
       </Right>
       <Left>
       </Left>
@@ -87,24 +100,45 @@ const Border=styled.div`
   border-radius: 0px 0px 1000px 1000px;
   justify-content: center;
   align-items: center;
+  animation: inner-left 1s 1s ease both;
+  @keyframes outer-left{
+    from {
+      transform: translateY(200px);
+    }
+    to {
+      transform: none;
+    }
+  }
+  @keyframes inner-left {
+    from {
+      transform: translateY(-500px);
+    }
+    to {
+      transform: none;
+    }
+  }
 `;
 
 const Content=styled.div`
-  height: 90%;
+  height: 94%;
   width: 90%;
   position: relative;
   left: 5%;
+  top: 10px;
   img{
     height: 100%;
     object-fit: cover;
     z-index: 1;
+    top: 10px;
+    position: relative;
     inset: 0;
     display: block;
     width: 100%;
     border-radius: 0px 0px 1000px 1000px;
   }
+  
 `;
-const Title=styled.div`
+const Shade=styled.div`
   position: absolute;
   height: 100%;
   width: 100%;
@@ -116,18 +150,23 @@ const Title=styled.div`
   justify-content: center;
   align-items: flex-end;
 `;
-const About=styled.div`
-  bottom: 0;
-  position: relative;
-  font-family: poppins;
-  font-style: bold;
-  font-weight: 500;
-  color: #9E3FFD;
+const Title=styled.div`
+  height: 350px;
+  width: 40px;
+  position: absolute;
+  top: 0;
+  left: 33%;
   font-size: 35px;
-  top: -10px;
-  
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-family: poppins;
+  font-weight: 600;
 `;
-const Rotate =styled.div`
-  
+const About=styled.div`
+  color: #fff;
+`;
+const Me=styled.div`
+  color: #0a012a;
 `;
 export default Bio

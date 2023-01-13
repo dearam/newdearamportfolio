@@ -26,31 +26,56 @@ function Navigationbar() {
                 <img src='./images/bitemo.png' alt="dearam"/>
             </Bitemoji>
             <Grid>
-                <NavLink  to="/" className="normal" style={({isActive})=>{return {color: isActive?'blue':''}}}>
+                <NavLink  to="/" className="normal" 
+                    style={({isActive})=>{return {
+                        color: isActive?'#0a012a':'',
+                        background:isActive?"#e9ecef":"",
+                        borderRadius:isActive?"500px 0px 0px 500px":"",
+                    }}}>
                         <Content >
                             <BiHomeSmile className='home'/>
                             <Name>Home</Name>
                         </Content>
                     </NavLink>
-                <NavLink  to="/about" className="normal" style={({isActive})=>{return {color: isActive?'blue':''}}}>
+                <NavLink  to="/about" className="normal" 
+                    style={({isActive})=>{return {
+                        color: isActive?'#0a012a':'',
+                        background:isActive?"#e9ecef":"",
+                        borderRadius:isActive?"500px 0px 0px 500px":"",
+                    }}}>
                     <Content >
                         <RiPagesLine className='home'/>
                         <Name>About</Name>
                     </Content>
                 </NavLink>
-                <NavLink  to="/bio" className="normal" style={({isActive})=>{return {color: isActive?'blue':''}}}>
+                <NavLink  to="/bio" className="normal" 
+                    style={({isActive})=>{return {
+                        color: isActive?'#0a012a':'',
+                        background:isActive?"#e9ecef":"",
+                        borderRadius:isActive?"500px 0px 0px 500px":"",
+                    }}}>
                     <Content >
                         <BsPencilSquare className='home'/>
                         <Name>Bio</Name>
                     </Content>
                 </NavLink>
-                <NavLink  to="/works" className="normal" style={({isActive})=>{return {color: isActive?'blue':''}}}>
+                <NavLink  to="/works" className="normal" 
+                    style={({isActive})=>{return {
+                        color: isActive?'#0a012a':'',
+                        background:isActive?"#e9ecef":"",
+                        borderRadius:isActive?"500px 0px 0px 500px":"",
+                    }}}>
                     <Content >
                         <FiBriefcase className='home'/>
                         <Name>Works</Name>
                     </Content>
                 </NavLink>
-                <NavLink  to="contact" className="normal" style={({isActive})=>{return {color: isActive?'blue':''}}}>
+                <NavLink  to="contact" className="normal" 
+                    style={({isActive})=>{return {
+                        color: isActive?'#0a012a':'',
+                        background:isActive?"#e9ecef":"",
+                        borderRadius:isActive?"500px 0px 0px 500px":"",
+                    }}}>
                     <Content>
                         <TiContacts className='home'/>
                         <Name>Contact</Name>
@@ -112,6 +137,7 @@ const Grid=styled.div`
         position: relative;
         display: block;
         .home{
+            top: 8px;
             height: 30px;
             position: relative;
             width: 30px;
@@ -133,10 +159,10 @@ const Name=styled.div`
     font-size: 12px;
     font-weight: 500;
     position: absolute;
+    bottom: 7px;
     left: 20%;
     transition: 0.5s;
-    opacity: 0;
-    
+    align-items: center;
     @media (max-width:1000px){
         font-size: 10px;
     }

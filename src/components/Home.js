@@ -377,7 +377,7 @@ const Homepage=styled.div`
       display: flex;
       height: 160vh;
       flex-direction: column-reverse;
-  }
+  }           
 `;
 
 export default Home

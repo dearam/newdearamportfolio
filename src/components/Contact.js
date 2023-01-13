@@ -1,10 +1,28 @@
 import React from 'react'
 import styled from 'styled-components'
+import './title.scss'
 
 function Contact() {
   return (
     <Contactpage>
-      <h1>contact pannu maame</h1>
+      <div class="title">
+        <div class="title-inner">
+          <div class="cafe">
+            <div class="cafe-inner">
+              <div>A</div>
+              <div>B</div>
+              <div>O</div>
+              <div>U</div>
+              <div>T</div>
+              <div>M</div>
+              <div>E</div>
+              </div>
+          </div>
+          <div class="mozart">
+            <div class="mozart-inner">Artistes</div>
+          </div>
+        </div>
+      </div>
     </Contactpage>
   )
 }

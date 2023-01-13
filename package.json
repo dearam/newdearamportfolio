@@ -49,6 +49,8 @@
     ]
   },
   "devDependencies": {
-    "@playwright/test": "^1.29.2"
+    "@playwright/test": "^1.29.2",
+    "node-sass": "^8.0.0",
+    "sass-loader": "^13.2.0"
   }
 }

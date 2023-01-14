@@ -551,6 +551,7 @@ const Me=styled.div`
       top: -20px;
       position: relative;
       flex-direction: row;
+      
     }
 `;
 const Svgname=styled.div`

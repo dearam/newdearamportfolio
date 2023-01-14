@@ -59,7 +59,7 @@ function Bio() {
             <Iletter>I</Iletter>
             am</Mtitle>
           <Mbox>
-          <Bar>
+            <Bar className='bar'>
             <Scroll>
             <div className="i-title-wrapper">
               <div className="i-title-item">UI Designer</div>
@@ -89,12 +89,44 @@ function Bio() {
               </Para3>
           </BContent>
           </Mbox>
+          <Qbox>
+            <img src='./images/jonsnowbg.jpg'/>
+            <LShade/>
+          </Qbox>
         </Maincard>
       </Left>
     </Biopage>
   )
 }
 
+const Qbox=styled.div`
+  height: 30%;
+  width: 95%;
+  position: relative;
+  display: flex;
+  top: 5%;
+  left: 5%;
+  img{
+    height: 100%;
+    object-fit: cover;
+    top: 10px;
+    position: relative;
+    inset: 0;
+    display: block;
+    width: 100%;
+  }
+`;
+const LShade=styled.div`
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background: linear-gradient(to bottom,rgba(4,8,15,0), #192133 90%);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+`;
 const Scroll=styled.div`
   flex: 1;
   display: flex;
@@ -137,18 +169,22 @@ const Scroll=styled.div`
 `;
 const Para1=styled.div`
   padding: 15px;
+  position: relative;
 `;
 const Para2=styled.div`
+top: -10px;
 padding: 15px;
+position: relative;
 `;
 const Para3=styled.div`
+top: -20px;
 position: relative;
-width: 90%;
-padding: 15px;`; 
+padding: 15px;
+`; 
 const BContent=styled.div`
   position: relative;
   height: 90%;
-  width: 100%;
+  width: auto;
   border-radius: 5px 5px 5px 150px; 
   font-size: 14px;
   color:#fff;
@@ -158,6 +194,12 @@ const BContent=styled.div`
   font-weight: 400;
   font-style: light;
   margin: 10px;
+  @media (max-width:1200px){
+      font-size: 12px;
+  }
+  @media (max-width:768px){
+      font-size: 11px;
+  }
 `;
 const Collection=styled.div`
   flex: 1;
@@ -187,13 +229,26 @@ const Mbox=styled.div`
   width: 95%;
   left: 5%;
   border-radius: 5px 5px 5px 120px;
+  box-shadow: rgb(0 0 0 / 80%) 0px 26px 30px -10px,
+                    rgb(0 0 0 / 73%) 0px 16px 10px -10px ;
   border: 2px solid #fff;
+  &:hover{
+    border: 2px solid #9E3FFD;
+    .bar{
+      border: 2px solid #9E3FFD;
+      border-width:0px 0px 2px 0px;
+    }
+    .i-title-item{
+      color:#fff;
+    }
+  }
 `;
 const Bar=styled.div`
   display: flex;
-  width:99.5%;
+  width:100%;
   height: 10%;
   border:2px solid #fff;
+  border-width:0px 0px 2px 0px;
 `;
 const Maincard=styled.div`
   height: 70%;
@@ -293,6 +348,12 @@ const Border=styled.div`
     to {
       transform: none;
     }
+  }
+  &:hover{
+    box-shadow: rgb(0 0 0 / 80%) 0px 26px 30px -10px,
+                    rgb(0 0 0 / 73%) 0px 16px 10px -10px ;
+    border: 2px solid #0a012a;
+    border-width:0px 3px 3px 3px;
   }
 `;
 

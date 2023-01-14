@@ -92,6 +92,11 @@ function Bio() {
           <Qbox>
             <img src='./images/jonsnowbg.jpg'/>
             <LShade/>
+            <Jonimg><img src='./images/jonsnowcircle.png'/></Jonimg>
+            <Qcontent>
+              <Quote>' what matters how we face it '</Quote>
+              <Author>- jon snow</Author>
+            </Qcontent>
           </Qbox>
         </Maincard>
       </Left>
@@ -99,30 +104,109 @@ function Bio() {
   )
 }
 
+
+const Jonimg=styled.div`
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 8%;
+  left: 0;
+  z-index: 1;
+  img{
+    border: solid #fff;
+    border-radius: 50%;
+    border:  #fff 3px solid;
+    height: 300%;
+    width: 220%;
+    @media (max-width:768px){
+      height: 170%;
+      border:  #fff 5px solid;
+      width: 120%;
+    }
+  }
+  @media (max-width:768px){
+    height: 70px;
+    width: 70px;
+    }
+`;
+
+const Qcontent=styled.div`
+  position:absolute;
+  left: 28%;
+  font-weight: 400;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  display: flex;
+  flex-direction:column;
+  @media (max-width:768px){
+    left: 30%;
+    }
+`;
+const Quote=styled.div`
+  flex: 1;
+  font-size: 70%;
+  position: relative;
+  letter-spacing: 1px;
+  top: 35%;
+  z-index: 1;
+  color: #fff;
+  @media (max-width:768px){
+    letter-spacing: 0;
+    font-size: 14px;
+    }
+`;
+const Author=styled.div`
+  flex: 1;
+  font-size: 14px;
+  position: relative;
+  letter-spacing: 5px;
+  top: 25px;
+  left: 36%;
+  z-index: 1;
+  color: #fff;
+  @media (max-width:768px){
+    font-size: 12px;
+    top:10px;
+    left: 23%;
+    }
+`;
+
 const Qbox=styled.div`
   height: 30%;
   width: 95%;
   position: relative;
-  display: flex;
   top: 5%;
   left: 5%;
+  overflow: hidden;
+  border-radius: 15px 15px 15px 15px;
+  border: 2px solid #fff;
+  box-shadow: rgb(0 0 0 / 80%) 0px 26px 30px -10px,
+                    rgb(0 0 0 / 73%) 0px 16px 10px -10px ;
   img{
     height: 100%;
     object-fit: cover;
-    top: 10px;
+    left: 25%;
     position: relative;
-    inset: 0;
-    display: block;
+    z-index: 0;
     width: 100%;
   }
+  &:hover{
+    border-radius: 15px 15px 15px 15px;
+    border: 2px solid #9E3FFD;
+  }
+  @media (max-width:768px){
+    height: 15%;
+    }
 `;
 const LShade=styled.div`
   position: absolute;
   height: 100%;
   width: 100%;
   top: 0;
-  background: linear-gradient(to bottom,rgba(4,8,15,0), #192133 90%);
-  z-index: 2;
+  background: linear-gradient(to left,rgba(4,8,15,0), #0a012a 60%);
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -285,15 +369,14 @@ const Biopage=styled.div`
       width: 100%;
       display: flex;
       height: 160vh;
-      flex-direction: column-reverse;
+      flex-direction: column;
   }
 `;
 const Right=styled.div`
   flex: 1;
   @media (max-width:768px){
       position: relative;
-      flex: 3;
-      background-color: #111;
+      flex: 0.5;
       border-radius: 0;
   }
 `;
@@ -320,7 +403,15 @@ const Box=styled.div`
   position: relative;
   left: 5%;
   background-color: #0a012a;
+  justify-content:center;
+  align-items: center;
   border-radius: 0px 0px 1000px 1000px;
+  @media (max-width:768px){
+    left: 0;
+    width: 97%;
+    border-width:2px 2px 2px 0px;
+    border-radius: 0px 1000px 1000px 0px;
+  }
 `;
 const Border=styled.div`
   position: relative;
@@ -355,6 +446,30 @@ const Border=styled.div`
     border: 2px solid #0a012a;
     border-width:0px 3px 3px 3px;
   }
+  @media (max-width:768px){
+    left: 0;
+    width: 90%;
+    top: 25%;
+    height: 70%;
+    border-width:2px 2px 2px 0px;
+    border-radius: 0px 1000px 1000px 0px;
+    @keyframes outer-left{
+      from {
+        transform: translateX(200px);
+      }
+      to {
+        transform: none;
+      }
+      }
+      @keyframes inner-left {
+        from {
+          transform: translateX(-500px);
+        }
+        to {
+          transform: none;
+        }
+      }
+  }
 `;
 
 const Content=styled.div`
@@ -372,7 +487,15 @@ const Content=styled.div`
     display: block;
     width: 100%;
     border-radius: 0px 0px 1000px 1000px;
+    @media (max-width:768px){
+      left: 0;
+      width: 100%;
+      border-width:2px 2px 2px 0px;
+      border-radius: 0px 1000px 1000px 0px;
+    }
   }
+  @media (max-width:768px){
+    }
   
 `;
 const Shade=styled.div`
@@ -386,6 +509,12 @@ const Shade=styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  @media (max-width:768px){
+      left: 0;
+      border-width:2px 2px 2px 0px;
+      border-radius: 0px 1000px 1000px 0px;
+      background: linear-gradient(to left,rgba(4,8,15,0), #192133 90%);
+    }
 `;
 const Title=styled.div`
   height: 350px;
@@ -399,12 +528,30 @@ const Title=styled.div`
   align-items: center;
   font-family: poppins;
   font-weight: 600;
+  @media (max-width:768px){
+    top: -110px;
+    left: 15%;
+    flex-direction: row;
+    gap: 1px;
+    }
 `;
 const About=styled.div`
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  @media (max-width:768px){
+      flex-direction: row;
+    }
 `;
 const Me=styled.div`
   color: #0a012a;
+  display: flex;
+  flex-direction: column;
+  @media (max-width:768px){
+      top: -20px;
+      position: relative;
+      flex-direction: row;
+    }
 `;
 const Svgname=styled.div`
   display: flex;

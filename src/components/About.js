@@ -125,8 +125,8 @@ const Jonimg=styled.div`
     }
   }
   @media (max-width:768px){
-    height: 70px;
-    width: 70px;
+    height: 56px;
+    width: 56px;
     }
 `;
 
@@ -197,7 +197,7 @@ const Qbox=styled.div`
     border: 2px solid #9E3FFD;
   }
   @media (max-width:768px){
-    height: 15%;
+    height: 13%;
     }
 `;
 const LShade=styled.div`

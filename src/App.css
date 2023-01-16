@@ -1,7 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,400;1,500&display=swap');
 @import 'react-checkbox-tree/lib/react-checkbox-tree.css';
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@100;200&display=swap');
 
+
+:root {
+  --total-time: 10s;
+  --coffe-delay: calc(var(--total-time) / 8);
+  --coffe-time: calc(var(--total-time) / 7);
+  --cup-delay: calc(var(--total-time) / 4.2);
+  --cup-time: calc(var(--total-time) / 4.2);
+  --under-delay: calc(var(--total-time) / 1.5);
+  --under-time: calc(var(--total-time) / 3.75);
+}
 #cool{
     fill:none;
   }

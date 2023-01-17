@@ -6,10 +6,27 @@
 
 :root {
   --total-time: 10s;
-  --coffe-delay: calc(var(--total-time) / 8);
-  --coffe-time: calc(var(--total-time) / 7);
-  --cup-delay: calc(var(--total-time) / 4.2);
-  --cup-time: calc(var(--total-time) / 4.2);
+  --y2006-delay: calc(var(--total-time) / 10);
+  --y2006-time: calc(var(--total-time) / 9);
+
+  --letter2006-delay: calc(var(--total-time) / 10);
+  --letter2006-time: calc(var(--total-time) / 10);
+  --letter2015-delay: calc(var(--total-time) / 5.2);
+  --letter2015-time: calc(var(--total-time) / 5.2);
+
+  --tri2006-delay: calc(var(--total-time) / 5);
+  --tri2006-time: calc(var(--total-time) / 5);
+  --tri2015-delay: calc(var(--total-time) / 3);
+  --tri2015-time: calc(var(--total-time) / 3);
+  --tri2017-delay: calc(var(--total-time) / 2.5);
+  --tri2017-time: calc(var(--total-time) / 2.5);
+  --tri2019-delay: calc(var(--total-time) / 2.1);
+  --tri2019-time: calc(var(--total-time) / 2.1);
+
+  --pschool-time: calc(var(--total-time) / 6);
+  --pschool-delay: calc(var(--total-time) / 6);
+  --y2015-time: calc(var(--total-time) / 4);
+  --y2015-delay: calc(var(--total-time) / 4);
   --under-delay: calc(var(--total-time) / 1.5);
   --under-time: calc(var(--total-time) / 3.75);
 }

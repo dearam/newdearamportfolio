@@ -10,7 +10,8 @@ function About() {
         <Border>
           <Box>
             <Content>
-              <img src='./images/cardimg.jpg'/>
+              <img className="bwimg" src='./images/againbw.jpg'/>
+              <img className="colorimg" src='./images/orgcolor.jpg'/>
               <Shade>
               <Svgname>
               <svg viewBox="0 0 74 14">
@@ -352,8 +353,7 @@ const Mtitle=styled.div`
   width: 30%;
 `;
 const Iletter=styled.div`
-  font-family: 'Dancing Script';
-  font-weight: 600;
+  font-family: mazius;
   color: #fff;
   font-style: bold;
 `;
@@ -478,7 +478,7 @@ const Content=styled.div`
   position: relative;
   left: 5%;
   top: 10px;
-  img{
+  .bwimg{
     height: 100%;
     object-fit: cover;
     top: 10px;
@@ -494,9 +494,32 @@ const Content=styled.div`
       border-radius: 0px 1000px 1000px 0px;
     }
   }
+  .colorimg{
+    display: none;
+  }
   @media (max-width:768px){
     }
-  
+  &:hover{
+    .bwimg{
+      display: none;
+    }
+    .colorimg{
+      height: 100%;
+      object-fit: cover;
+      top: 10px;
+      position: relative;
+      inset: 0;
+      display: block;
+      width: 100%;
+      border-radius: 0px 0px 1000px 1000px;
+      @media (max-width:768px){
+        left: 0;
+        width: 100%;
+        border-width:2px 2px 2px 0px;
+        border-radius: 0px 1000px 1000px 0px;
+      }
+    }
+  }
 `;
 const Shade=styled.div`
   position: absolute;

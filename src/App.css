@@ -3,7 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@100;200&display=swap');
 
-
+@font-face{
+  font-family: "mazius";
+  src:url(../public/fonts/Mazius\ Display\ Extraitalic.otf);
+}
 :root {
   --total-time: 10s;
   --y2006-delay: calc(var(--total-time) / 10);
@@ -13,6 +16,10 @@
   --letter2006-time: calc(var(--total-time) / 10);
   --letter2015-delay: calc(var(--total-time) / 5.2);
   --letter2015-time: calc(var(--total-time) / 5.2);
+  --letter2017-delay: calc(var(--total-time) / 4.2);
+  --letter2017-time: calc(var(--total-time) / 4.2);
+  --letter2019-delay: calc(var(--total-time) / 4.2);
+  --letter2019-time: calc(var(--total-time) / 4.2);
 
   --tri2006-delay: calc(var(--total-time) / 5);
   --tri2006-time: calc(var(--total-time) / 5);

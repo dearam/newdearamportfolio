@@ -1,5 +1,81 @@
 [
     {
-        "name":""
+        "name":"Python",
+        "fullname":"Python Weather api",
+        "description":"Getting weather of the particular city with the use of python and OpenWeather api.It retrieve all the datas of the city and displays the weather of the city in Nextpage.",
+        "technologies":["python","OpenWeather api","Flask"]
+    },
+    {
+        "name":"Dashboard",
+        "fullname":"Reactjs Dashboard",
+        "description":"It is a Dashboard with side navbar.Totally it contains 8 components and it has todo app.Todo app is working with the concept of Hooks.Fully Designed with jsx and css.",
+        "technologies":["Html","Reactjs","Hooks"]
+    },
+    {
+        "name":"Video Search",
+        "fullname":"React Video Search",
+        "description":"This app is like Youtube and it's worked with the use of Youtube api.It uses Redux concepts for video retrieving fully React based app.It shows Recomended videos also on the side bar.",
+        "technologies":["Youtubeapi","Reactjs","Redux"]
+    },
+    {
+        "name":"Portfolio",
+        "fullname":"Old Portfolio",
+        "description":"I customized my own portfolio with the help of youtube.It has 5 components with slide navbar.Whole components were working separately with css.",
+        "technologies":["Reactjs","Html","Scss"]
+    },
+    {
+        "name":"Audiobook",
+        "fullname":"Py Audiobook",
+        "description":"This program working with the help of pytxt3 module.It converts the text to speech and It's retreived from ibm watson text to speech.Once upload the pdf it will read all the pdf with the use python.",
+        "technologies":["Python3","ibm watson","pytxt3"]
+    },
+    {
+        "name":"Bus Reservation",
+        "fullname":"Bus Reservation Java",
+        "description":"This is just projgram and it get the name,age,boarding and leaving point.With the use of those data it return the seat of their bus else show the availability of the buses.",
+        "technologies":["Java8","Oops"]
+    },
+    {
+        "name":"Bus Reservation",
+        "fullname":"Bus Reservation Java",
+        "description":"This is just projgram and it get the name,age,boarding and leaving point.With the use of those data it return the seat of their bus else show the availability of the buses.",
+        "technologies":["Java8","Oops"]
+    },
+    {
+        "name":"Train ticket booking",
+        "fullname":"Ticket Booking Javafx",
+        "description":"It is a desktop app for windows.It contains two main components.those login and booking pages.Whole stuff is developed with the use of javafx and mysql.",
+        "technologies":["Oops","Javafx","mysql"]
+    },
+    {
+        "name":"Train ticket booking",
+        "fullname":"Ticket Booking Javafx",
+        "description":"It is a desktop app for windows.It contains two main components.those login and booking pages.Whole stuff is developed with the use of javafx and mysql.",
+        "technologies":["Oops","Javafx","mysql"]
+    },
+    {
+        "name":"Student registration",
+        "fullname":"Student Register Javafx",
+        "description":"It is a desktop app for windows.It contains two main components.One components is user input and another one is Database showing components.Whole these app is retrieving and storing data with the use of jdbc.",
+        "technologies":["Oops","Javafx","Jdbc"]
+    },
+    {
+        "name":"Student registration",
+        "fullname":"Student Register Javafx",
+        "description":"It is a desktop app for windows.It contains two main components.One components is user input and another one is Database showing components.Whole these app is retrieving and storing data with the use of jdbc.",
+        "technologies":["Oops","Javafx","Jdbc"]
+    },
+    {
+        "name":"Disney+hotstar Clone",
+        "fullname":"Disney+ Clone",
+        "description":"I developed Disney+hotstar clone web app with use of react and used firebase for authentication purpose.Whole design is handled by React styled components.it contains 8 components and respective main page for each and every movies.",
+        "technologies":["Reactjs","firebase","React-styled"]
+    },
+    {
+        "name":"Checkbox",
+        "fullname":"Checkbox With React",
+        "description":"A react tree view componet and its a single component with two views.It retrieve all those datas from json file and displayed as checkbox.Checkedbox list will showed on the ther page with the count.",
+        "technologies":["Reactjs","Json","React-styled"]
     }
+
 ]

@@ -5,14 +5,15 @@ import styled from 'styled-components';
 function Works() {
   return (
     <Workspage>
-      <Title>
-        <My>My</My>
-        <Projects>Projects</Projects>
-      </Title>
+      
     </Workspage>
   )
 }
-const Title=styled.div``;
+const Title=styled.div`
+  position:relative;
+  left:2%;
+  top:1%;
+`;
 const My=styled.div``;
 const Projects=styled.div``;
 const Workspage=styled.div`

@@ -2,7 +2,7 @@ import {React,useState} from 'react'
 import styled from 'styled-components';
 import data from "../porjects.json";
 import { FiExternalLink } from "react-icons/fi";
-
+import { FiGithub,FiLinkedin,FiInstagram,FiTwitter} from "react-icons/fi";
 
 function Works() {
   return (
@@ -23,14 +23,22 @@ function Works() {
             <NInnerbox className='innerbox'>
               <Ntitle>{node.name}</Ntitle>
               <NContent>{node.description}</NContent>
+              <Ubox>
               <NTech>
               {node.technologies.map((Nnode)=>{
                 return(
-                  <div>{Nnode}</div>
+                  <Nbtn>{Nnode}</Nbtn>
                   )
               })}
-              <FiExternalLink href='www.github.com'/>
+              
               </NTech>
+              </Ubox>
+              <LIcon href={node.Wlink}>
+                <FiExternalLink className='icon'/>
+              </LIcon>
+              <GIcon href={node.Glink}>
+                <FiGithub />
+              </GIcon>
               </NInnerbox>
           </Nbox>
          </NMain>
@@ -42,6 +50,61 @@ function Works() {
     </Workspage>
   )
 }
+
+const Ubox=styled.div`
+  height: 20%;
+  top: 80%;
+  display: flex;
+  width: 100%;
+  position: absolute;
+  width: 100%;
+  justify-content: center;
+
+`;
+const NTech=styled.div`
+  position: relative;
+  border-radius: 5px;
+  display: flex;
+  height: 100%;
+  position: absolute;
+  width: 80%;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+`;
+
+const LIcon=styled.a`
+  position: absolute;
+  align-items: flex-start;
+  display: flex;
+  top: 7%;
+  left: 10px;
+  color: #fff;
+  &:hover{
+    .icon{
+      color: #9E3FFD;
+    }
+  }
+`;
+const GIcon=styled.a`
+  position: absolute;
+  align-items: flex-start;
+  display: flex;
+  top: 7%;
+  right: 10px;
+  color: #fff;
+  &:hover{
+      color: #9E3FFD;
+  }
+`;
+const Nbtn=styled.div`
+  font-size: 10px;
+  background-color: #9E3FFD;
+  padding: 3px;
+  border-radius: 5px;
+  font-family: poppins;
+  font-weight: 400;
+`;
 const NInnerbox=styled.div`
   display:none
 `;
@@ -57,10 +120,6 @@ const Shade=styled.div`
   justify-content: center;
   align-items: flex-end;
   @media (max-width:768px){
-      left: 0;
-      border-width:2px 2px 2px 0px;
-      border-radius: 0px 1000px 1000px 0px;
-      background: linear-gradient(to left,rgba(4,8,15,0), #192133 90%);
     }
 `;
 const Imgbox=styled.div`
@@ -78,21 +137,13 @@ const Imgbox=styled.div`
     width:100%;
   }
 `;
-const NTech=styled.div`
-  height: 20%;
-  position: absolute;
-  border-radius: 5px;
-  display: flex;
-  top: 80%;
-  width: 100%;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-`;
+
 const NContent=styled.div`
   position: relative;
-  font-size: 14px;
-  padding: 10px;
+  font-size: 12px;
+  font-family: poppins;
+  font-weight: 200;
+  padding: 15px;
   top: 20%;
 `;
 const Ntitle=styled.div`
@@ -115,9 +166,9 @@ const Sidetitle=styled.div`
   font-family: mazius;
   font-style: italic;
   font-weight: 500;
-  letter-spacing: 2px;
   color: #fff;
   top: 80%;
+  letter-spacing: 2px;
   align-items: flex-end;
   justify-content: center;
   width: 100%;
@@ -127,11 +178,11 @@ const Sidetitle=styled.div`
 `;
 const Nbox=styled.div`
   left: 2%;
-  width: 80%;
+  width: 87%;
   display: flex;
   color: #fff;
   border-radius:10px;
-  border: 1.5px solid #333;
+  border: 2px solid #222;
   background-color: #0a012a;
   position: relative;
 `;
@@ -150,13 +201,14 @@ const NMain=styled.div`
       transform: rotate(-180deg);
       position: absolute;
       color: #fff;
+      letter-spacing: 4px;
       font-size: 12px;
       justify-content: center;
       align-items: flex-end;
       height: 100%;
       width: 0;
       top: 0;
-      left: -8%;
+      left: -9%;
     }
     .imgbox{
       display: none;
@@ -176,10 +228,11 @@ const NMain=styled.div`
 `;
 const Mainmap=styled.div`
   display: grid;  
-  grid-gap: 20px;
+  grid-gap: 5px;
   width: 100%;
+  height: 70%;
   margin: 4%;
-  grid-template-columns: repeat(3,minmax(0,1fr));
+  grid-template-columns: repeat(4,minmax(0,1fr));
   @media (max-width:768px){
     height: 50%;
         grid-template-columns: repeat(2,minmax(0,1fr));

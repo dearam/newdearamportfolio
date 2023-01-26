@@ -65,16 +65,16 @@ function Home() {
           <Icon href="https://github.com/dearam">
             <FiGithub/>
           </Icon>
-          <Icon>
+          <Icon href="https://www.linkedin.com/in/dearam/">
           <FiLinkedin/>
           </Icon>
-          <Icon>
+          <Icon href="https://www.instagram.com/_dearam_3/">
           <FiInstagram/>
-          </Icon>
-          <Icon>
+          </Icon >
+          <Icon href="https://twitter.com/_dearam_3">
           <FiTwitter/>
           </Icon>
-        </Icons>
+        </Icons >
         </Iconbar>
         
       </Left>

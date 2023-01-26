@@ -38,7 +38,7 @@
     {
         "name":"Audiobook",
         "fullname":"Py Audiobook",
-        "description":"This program working with the help of pytxt3 module.It converts the text to speech and It's retreived from ibm watson text to speech.Once upload the pdf it will read all the pdf with the use python.",
+        "description":"This program working with the help of pytxt3 module.It converts the text to speech and It's retreived from ibm watson text to speech.",
         "technologies":["Python3","ibm watson","pytxt3"],
         "image":"./images/audiobook.jpg",
         "Wlink":"",

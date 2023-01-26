@@ -7,6 +7,10 @@ import { FiGithub,FiLinkedin,FiInstagram,FiTwitter} from "react-icons/fi";
 function Works() {
   return (
     <Workspage>
+      <Etitle>
+          <Career className='career'>Works</Career>
+          <Flow className='flow'>Done</Flow>
+        </Etitle>
       <Mainmap>
       {data.map((node)=>{
         return(
@@ -50,7 +54,60 @@ function Works() {
     </Workspage>
   )
 }
-
+const Career=styled.div`
+  position: relative;
+  color: #0a012a;
+`;
+const Flow=styled.div`
+  top:8px;
+  left: -3.5px;
+  color: #FFF;
+  font-weight:none;
+  letter-spacing:3px;
+  font-size:35px;
+  position: relative;
+  font-family:mazius;
+`;
+const Etitle=styled.div`
+  font-size: 40px;
+  font-weight: 900;
+  top:5%;
+  transform: translate(-50%,-50%);
+  background-image: linear-gradient(#9E3FFD,#9E3FFD);
+  background-size: 100% 5px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  transition: background-size .7s, background-position .5s ease-in-out;
+  left: 15%;
+  position: absolute;
+  animation: text-clip 5s 0s cubic-bezier(0.5, 0, 0.1, 1) both;;
+  display: flex;
+  gap: 20px;
+  
+  @keyframes text-clip {
+    from {
+      clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    }
+    to {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+  &:hover{
+    background-size: 100% 100%;
+    background-position: 0% 100%;
+    transition: background-position .7s, background-size .5s ease-in-out;
+    .career{
+      color:#fff;
+    }
+    .flow{
+      color:#0a012a;
+    }
+  }
+  @media (max-width:758px){
+    left:40%;
+    }
+`;
 const Ubox=styled.div`
   height: 20%;
   top: 80%;
@@ -104,6 +161,9 @@ const Nbtn=styled.div`
   border-radius: 5px;
   font-family: poppins;
   font-weight: 400;
+  @media (max-width:768px){
+      font-size: 9px;
+    }
 `;
 const NInnerbox=styled.div`
   display:none
@@ -145,6 +205,9 @@ const NContent=styled.div`
   font-weight: 200;
   padding: 15px;
   top: 20%;
+  @media (max-width:768px){
+      font-size: 9px;
+    }
 `;
 const Ntitle=styled.div`
   position: absolute;
@@ -160,6 +223,9 @@ const Ntitle=styled.div`
   background-position: 0% 100%;
   background-size: 100% 2px;
   background-repeat: no-repeat;
+  @media (max-width:768px){
+      font-size: 9px;
+    }
 `;
 const Sidetitle=styled.div`
   display: flex;
@@ -175,6 +241,9 @@ const Sidetitle=styled.div`
   font-size: 20px;
   position: absolute;
   z-index: 1;
+  @media (max-width:768px){
+        font-size: 14px;
+      }
 `;
 const Nbox=styled.div`
   left: 2%;
@@ -209,6 +278,10 @@ const NMain=styled.div`
       width: 0;
       top: 0;
       left: -9%;
+      @media (max-width:768px){
+        font-size: 10px;
+        left: -10%;
+      }
     }
     .imgbox{
       display: none;
@@ -220,8 +293,8 @@ const NMain=styled.div`
       background-color: #0a012a;
         box-shadow: rgb(0 0 0 / 80%) 0px 26px 30px -10px,
                     rgb(0 0 0 / 73%) 0px 16px 10px -10px ;
-        transform: scale(1.02);
-        z-index: 2;
+        transform: scale(1.05);
+        z-index: 1;
         border-color: rgba(249,249,249,0.8);
     }
   }
@@ -236,14 +309,12 @@ const Mainmap=styled.div`
   margin: 4%;
   grid-template-columns: repeat(4,minmax(0,1fr));
   @media (max-width:768px){
-    height: 50%;
-        grid-template-columns: repeat(2,minmax(0,1fr));
+    height: 80%;
+    grid-template-columns: repeat(2,minmax(0,1fr));
     }
 `;
 const Title=styled.div`
   position:relative;
-  left:2%;
-  top:1%;
 `;
 const My=styled.div``;
 const Projects=styled.div``;
@@ -254,6 +325,16 @@ const Workspage=styled.div`
     height: 200vh;
     left: 5%;
     display: flex;
+    @media (max-width:768px){
+      left: 0;
+      height: 250vh;
+      width: 100%;
+  }
+  @media (max-height:700px){
+      left: 0;
+      height: 300vh;
+      width: 100%;
+  }
 `;
 
 export default Works

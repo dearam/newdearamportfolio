@@ -229,6 +229,8 @@ const NMain=styled.div`
 const Mainmap=styled.div`
   display: grid;  
   grid-gap: 5px;
+  position: relative;
+  top: 10%;
   width: 100%;
   height: 70%;
   margin: 4%;

@@ -1,8 +1,8 @@
-import {React,useState} from 'react'
+import {React} from 'react'
 import styled from 'styled-components';
 import data from "../porjects.json";
 import { FiExternalLink } from "react-icons/fi";
-import { FiGithub,FiLinkedin,FiInstagram,FiTwitter} from "react-icons/fi";
+import { FiGithub} from "react-icons/fi";
 
 function Works() {
   return (
@@ -21,7 +21,7 @@ function Works() {
             <Shade>
               
             </Shade>
-            <img src={node.image}/>
+            <img src={node.image} alt='nodeimage'/>
           </Imgbox>
           <Sidetitle className='sidetitle'>{node.fullname}</Sidetitle>
             <NInnerbox className='innerbox'>
@@ -104,9 +104,21 @@ const Etitle=styled.div`
       color:#0a012a;
     }
   }
-  @media (max-width:758px){
-    left:40%;
+  @media (max-width:320px){
+    top:3%;
+    left:35%;
+  }
+  @media (max-width:425px) and (min-width:320px){
+    top:3%;
+    left:35%;
+    @media (max-height:620px){
+      
     }
+  }
+  @media (max-width:768px) and (min-width:425px){
+    left:22%;
+    top:3%;
+  }
 `;
 const Ubox=styled.div`
   height: 20%;
@@ -302,22 +314,33 @@ const NMain=styled.div`
 const Mainmap=styled.div`
   display: grid;  
   grid-gap: 5px;
+  grid-row-gap: 10px;
   position: relative;
   top: 10%;
-  width: 100%;
+  width: 90%;
   height: 70%;
   margin: 4%;
   grid-template-columns: repeat(4,minmax(0,1fr));
-  @media (max-width:768px){
-    height: 80%;
-    grid-template-columns: repeat(2,minmax(0,1fr));
+    @media (max-width:320px){
+      top:5%;
+      height: 80%;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+    @media (max-width:425px) and (min-width:320px){
+      top:5%;
+      height: 80%;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      @media (max-height:620px){
+        
+      }
+    }
+    @media (max-width:900px) and (min-width:425px){
+      height: 80%;
+      top:5%;
+      grid-template-columns: repeat(2,minmax(0,1fr));
     }
 `;
-const Title=styled.div`
-  position:relative;
-`;
-const My=styled.div``;
-const Projects=styled.div``;
+
 const Workspage=styled.div`
     position: relative;
     background-image: linear-gradient(#232140,#d7d6dc);
@@ -330,11 +353,11 @@ const Workspage=styled.div`
       height: 250vh;
       width: 100%;
   }
-  @media (max-height:700px){
-      left: 0;
-      height: 300vh;
-      width: 100%;
-  }
+  // @media (max-height:700px){
+  //     left: 0;
+  //     height: 300vh;
+  //     width: 100%;
+  // }
 `;
 
 export default Works

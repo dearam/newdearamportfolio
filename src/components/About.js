@@ -10,8 +10,8 @@ function About() {
         <Border>
           <Box>
             <Content>
-              <img className="bwimg" src='./images/againbw.jpg'/>
-              <img className="colorimg" src='./images/orgcolor.jpg'/>
+              <img className="bwimg" src='./images/againbw.jpg' alt="bwimg"/>
+              <img className="colorimg" src='./images/orgcolor.jpg' alt='colorimage'/>
               <Shade>
               <Svgname>
               <svg viewBox="0 0 74 14">
@@ -58,7 +58,8 @@ function About() {
           <Mtitle>
             who
             <Iletter>I</Iletter>
-            am</Mtitle>
+            am
+          </Mtitle>
           <Mbox>
             <Bar className='bar'>
             <Scroll>
@@ -91,9 +92,9 @@ function About() {
           </BContent>
           </Mbox>
           <Qbox>
-            <img src='./images/jonsnowbg.jpg'/>
+            <img src='./images/jonsnowbg.jpg' alt='background'/>
             <LShade/>
-            <Jonimg><img src='./images/jonsnowcircle.png'/></Jonimg>
+            <Jonimg><img src='./images/jonsnowcircle.png' alt="jonsnow"/></Jonimg>
             <Qcontent>
               <Quote>' what matters how we face it '</Quote>
               <Author>- jon snow</Author>
@@ -197,8 +198,25 @@ const Qbox=styled.div`
     border-radius: 15px 15px 15px 15px;
     border: 2px solid #9E3FFD;
   }
-  @media (max-width:768px){
-    height: 13%;
+    @media (max-width:320px){
+      height:18%;
+    }
+    @media (max-width:425px) and (min-width:320px){
+      @media (max-height:620px){
+        height: 18%;
+      }
+      @media (max-height:700px) and (min-height:620px){
+        height: 16%;
+      }
+      @media (max-height:800px) and (min-height:700px){
+        height: 14%;
+      }
+      @media (max-height:900px) and (min-height:800px){
+        height: 13%;
+      }
+    }
+    @media (max-width:768px) and (min-width:425px){
+      height: 13%;
     }
 `;
 const LShade=styled.div`
@@ -279,11 +297,42 @@ const BContent=styled.div`
   font-weight: 400;
   font-style: light;
   margin: 10px;
-  @media (max-width:1200px){
-      font-size: 12px;
+  @media (max-width:320px){
+    height : 100%;
+    font-size: 9px;
   }
-  @media (max-width:768px){
-      font-size: 11px;
+  @media (max-width:425px) and (min-width:320px){
+    font-size: 11px;
+    @media (max-height:620px){
+      font-size:10px;
+    }
+    @media (max-height:700px) and (min-height:620px){
+      font-size:12px;
+    }
+    @media (max-height:800px) and (min-height:700px){
+      font-size:13px;
+    }
+    @media (max-height:900px) and (min-height:800px){
+      font-size:14px;
+    }
+  }
+  @media (max-width:768px) and (min-width:425px){
+    font-size: 11px;
+  }
+  @media (max-width:965px) and (min-width:768px){
+    
+  }
+  @media (max-width:1024px) and (min-width:965px){
+    
+  }
+  @media (max-width:1280px) and (min-width:1024px){
+    
+  }
+  @media (max-width:1440px) and (min-width:1280px){
+  
+  }
+  @media (max-width:1600px) and (min-width:1440px){
+    font-size: 18px;
   }
 `;
 const Collection=styled.div`
@@ -327,6 +376,18 @@ const Mbox=styled.div`
       color:#fff;
     }
   }
+  @media (max-width:320px){
+    height:100%:
+  }
+  @media (max-width:425px) and (min-width:321px){
+    height:85%;
+    @media (max-height:620px){
+      height:87%;
+    }
+  }
+  @media (max-width:768px) and (min-width:425px){
+    
+  }
 `;
 const Bar=styled.div`
   display: flex;
@@ -351,6 +412,24 @@ const Mtitle=styled.div`
   left: 5%;
   color: #9E3FFD;
   width: 30%;
+  @media (max-width:768px){
+    
+  }
+  @media (max-width:965px) and (min-width:769px){
+    
+  }
+  @media (max-width:1024px) and (min-width:965px){
+    
+  }
+  @media (max-width:1280px) and (min-width:1024px){
+    
+  }
+  @media (max-width:1440px) and (min-width:1280px){
+    font-size:30px;
+  }
+  @media (max-width:1600px) and (min-width:1440px){
+    font-size:35px;
+  }
 `;
 const Iletter=styled.div`
   font-family: mazius;
@@ -408,9 +487,25 @@ const Box=styled.div`
   border-radius: 0px 0px 1000px 1000px;
   @media (max-width:768px){
     left: 0;
-    width: 97%;
+    width: 100%;
+    height:100%;
     border-width:2px 2px 2px 0px;
     border-radius: 0px 1000px 1000px 0px;
+  }
+  @media (max-width:965px) and (min-width:769px){
+    
+  }
+  @media (max-width:1024px) and (min-width:965px){
+    
+  }
+  @media (max-width:1280px) and (min-width:1024px){
+    
+  }
+  @media (max-width:1440px) and (min-width:1290px){
+    
+  }
+  @media (max-width:1600px) and (min-width:1440px){
+    
   }
 `;
 const Border=styled.div`
@@ -448,8 +543,8 @@ const Border=styled.div`
   }
   @media (max-width:768px){
     left: 0;
-    width: 90%;
-    top: 25%;
+    width: 80%;
+    top: 20%;
     height: 70%;
     border-width:2px 2px 2px 0px;
     border-radius: 0px 1000px 1000px 0px;
@@ -497,8 +592,6 @@ const Content=styled.div`
   .colorimg{
     display: none;
   }
-  @media (max-width:768px){
-    }
   &:hover{
     .bwimg{
       display: none;
@@ -519,6 +612,17 @@ const Content=styled.div`
         border-radius: 0px 1000px 1000px 0px;
       }
     }
+  }  
+  @media (max-width:320px){
+      
+  }
+  @media (max-width:425px) and (min-width:320px){
+    
+  }
+  @media (max-width:768px) and (min-width:425px){
+    top:17px;
+    left:3%;
+    width:93%;
   }
 `;
 const Shade=styled.div`
@@ -551,31 +655,117 @@ const Title=styled.div`
   align-items: center;
   font-family: poppins;
   font-weight: 600;
-  @media (max-width:768px){
-    top: -110px;
-    left: 15%;
-    flex-direction: row;
-    gap: 1px;
+    @media (max-width:320px){
+      top: -115px;
+      left: 7%;
+      flex-direction: row;
+      gap: 1px;
+    }
+    @media (max-width:360px) and (min-width:321px){
+      top: -115px;
+      left: 7%;
+      flex-direction: row;
+      gap: 1px;
+    }
+    @media (max-width:426px) and (min-width:360px){
+      top: -105px;
+      left: 7%;
+      flex-direction: row;
+      gap: 1px;
+    }
+    @media (max-width:768px) and (min-width:426px){
+      top: -75px;
+      left: 10%;
+      flex-direction: row;
+      gap: 1px;
+    }
+    @media (max-width:965px) and (min-width:768px){
+      
+    }
+    @media (max-width:1024px) and (min-width:965px){
+      
+    }
+    @media (max-width:1280px) and (min-width:1024px){
+      
+    }
+    @media (max-width:1440px) and (min-width:1280px){
+      
+    }
+    @media (max-width:1600px) and (min-width:1440px){
+      top:65px;
     }
 `;
 const Aboutword=styled.div`
   color: #fff;
   display: flex;
   flex-direction: column;
-  @media (max-width:768px){
+    @media (max-width:320px){
+      font-size:20px;
       flex-direction: row;
     }
+    @media (max-width:426px) and (min-width:321px){
+      font-size:20px;
+      flex-direction: row;
+    }
+    @media (max-width:768px) and (min-width:426px){
+      font-size:45px;
+      flex-direction: row;
+    }
+    @media (max-width:965px) and (min-width:768px){
+      
+    }
+    @media (max-width:1024px) and (min-width:965px){
+      
+    }
+    @media (max-width:1280px) and (min-width:1024px){
+      
+    }
+    @media (max-width:1440px) and (min-width:1280px){
+      
+    }
+    @media (max-width:1600px) and (min-width:1440px){
+      font-size:45px;
+    }
+    
+    
 `;
 const Me=styled.div`
   color: #0a012a;
   display: flex;
   flex-direction: column;
-  @media (max-width:768px){
-      top: -20px;
-      position: relative;
-      flex-direction: row;
-      
-    }
+  @media (max-width:320px){
+    font-size:46px;
+    top: -20px;
+    position: relative;
+    flex-direction: row;
+  }
+  @media (max-width:425px) and (min-width:321px){
+    font-size:46px;
+    top: -20px;
+    position: relative;
+    flex-direction: row;
+  }
+  @media (max-width:768px) and (min-width:425px){
+    font-size:45px;
+    top: -20px;
+    position: relative;
+    flex-direction: row;
+  }
+  @media (max-width:965px) and (min-width:768px){
+    
+  }
+  @media (max-width:1024px) and (min-width:965px){
+    
+  }
+  @media (max-width:1280px) and (min-width:1024px){
+    
+  }
+  @media (max-width:1440px) and (min-width:1280px){
+    
+  }
+  @media (max-width:1600px) and (min-width:1440px){
+    font-size:45px;
+  }
 `;
 const Svgname=styled.div`
   display: flex;

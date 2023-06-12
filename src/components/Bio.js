@@ -222,62 +222,7 @@ className='subcontent1'/>
     </Aboutpage>
   )
 }
-const Skill=styled.div`
-  font-size:14px;
-  color:#fff;
-  width:120px;
-  height:60px;
-  text-align:center;
-  position:relative;
-  border-radius:50%;
-  svg{
-    top:0;
-    left:0;
-    color:#fff;
-    height:100%;
-    width:100%;
-    border-radius:80%;
-    background-color:#333;
-    position:relative;
 
-  }
-  svg circle {
-    width: 100%;
-    height: 100%;
-    fill: none; 
-    stroke: #f0f0f0;
-    stroke-width: 5;
-    stroke-linecap: round;
-  }
-  &::after{
-    content:"$";
-  }
-`;
-const Skillset=styled.div`
-  height:50%;
-  width:50%;
-  display:flex;
-  gap:10px;
-  
-`;
-const Skillsprogram=styled.div`
-  flex:1;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-`;
-const Extraskill=styled.div`
-  flex:1;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-`;
-const Page=styled.div`
-  height:70%;
-  width:100%;
-  position:relative;
-  display:flex;
-`;
 const Epage=styled.div`
   height: 80%;
   width: 100%;
@@ -418,10 +363,26 @@ const Svgline=styled.div`
 const Mobsvgline=styled.div`
   display:none;
   padding:20px;
+  position:relative;
   @media (max-width:758px){
       display:flex;
       height:100%;
       width:90%;
+      @media (max-height:650px){
+        top:200px;
+      }
+      @media (max-height:700px) and (min-height:650px){
+        top:100px
+      }
+      @media (max-height:770px) and (min-height:700px){
+        top:200px
+      }
+      @media (max-height:830px) and (min-height:770px){
+        top:100px
+      }
+      @media (max-height:900px) and (min-height:830px){
+        
+      }
     }
     .line{
     stroke-dasharray: 4800;
@@ -596,34 +557,6 @@ const Programmingskillspage=styled.div`
   display:flex;
   justify-content:flex-end;
   align-items:flex-end;
-`;
-const Line=styled.div`
-  .line{
-    stroke-dasharray: 2800;
-    stroke-dashoffset: 2800;
-    animation: line var(--total-time) ease-in-out;
-    animation-fill-mode: forwards;
-  }
-  .cup{
-    opacity: 0;
-    animation: anim var(--coffe-time) linear var(--coffe-delay);
-    animation-fill-mode: forwards;
-  }
-  .coffee{
-    opacity: 0;
-    animation: anim var(--cup-time) linear var(--cup-delay);
-    animation-fill-mode: forwards;
-  }
-  @keyframes line {
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
-  @keyframes anim {
-    to {
-      opacity: 1;
-    }
-  }
 `;
 const Aboutpage=styled.div`
   position: absolute;

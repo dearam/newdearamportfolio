@@ -7,7 +7,7 @@ import { RiPagesLine } from "react-icons/ri";
 import { TiContacts } from "react-icons/ti";
 
 import { BsPencilSquare } from "react-icons/bs";
-import {NavLink,Link} from "react-router-dom"
+import {NavLink} from "react-router-dom"
 import '../App.css'
 
 function Navigationbar() {
@@ -20,6 +20,9 @@ function Navigationbar() {
     //         this.className+="active";
     //     })
     // }
+
+        
+
   return (
         <NavMenu>
             <Bitemoji>
@@ -31,6 +34,7 @@ function Navigationbar() {
                         color: isActive?'#0a012a':'',
                         background:isActive?"#e9ecef":"",
                         borderRadius:isActive?"500px 0px 0px 500px":"",
+                      
                     }}}>
                         <Content >
                             <BiHomeSmile className='home'/>
@@ -108,12 +112,27 @@ const NavMenu=styled.div`
     background-color: #0a012a;
     align-items: center;
     justify-content: center;
-    @media (max-width:768px){
+    @media (max-width:426px){
+        background-color: rgba(10,1,42,0.5);
         position: fixed;
-        bottom: 0;
-        width: 100%;
-        z-index: 2;
-        height: 70px;
+        bottom: 20px;
+        width: 90%;
+        left:5%;
+        z-index: 5;
+        height: 6.5%;
+        border:1px solid white;
+        border-radius: 100px;
+    }
+    @media (max-width:768px) and (min-width:426px){
+        background-color: rgba(10,1,42,0.5);
+        position: fixed;
+        bottom: 30px;
+        width: 50%;
+        left:25%;
+        z-index: 5;
+        height: 6.5%;
+        border:1px solid white;
+        border-radius: 100px;
     }
 `;
 
@@ -141,6 +160,11 @@ const Grid=styled.div`
             height: 30px;
             position: relative;
             width: 30px;
+            @media (max-width:768px){
+                top:5px;
+                height:25px;
+                width:25px;
+            }
         }
     }
     .normal .active{
@@ -150,7 +174,7 @@ const Grid=styled.div`
         left: 15%;
         display: grid;
         grid-gap: 0;
-        grid-template-columns: repeat(6,minmax(60px,auto));
+        grid-template-columns: repeat(5,minmax(50px,auto));
     }
     
 `;

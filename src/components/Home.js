@@ -1,5 +1,4 @@
 import React from 'react'
-import { RiContrast2Line } from 'react-icons/ri';
 import { FiGithub,FiLinkedin,FiInstagram,FiTwitter} from "react-icons/fi";
 import styled from 'styled-components'
 import { TbBrandPython } from "react-icons/tb";
@@ -30,7 +29,7 @@ function Home() {
                 <Tech><DiJavascript/></Tech>
                 <Tech><FaFigma/></Tech>
               </Techs>
-            </Subcontent>
+          </Subcontent>
             <Subcontent>
               <AContent>
                 <CIcon>
@@ -52,7 +51,7 @@ function Home() {
       </Right>
       <Left>  
         <Circle>
-          <img src='./images/dearamcircle.png'/>
+          <img src='./images/dearamcircle.png' alt='dearam'/>
         </Circle>
         <Intro>
           <Name>Ram Prasath M V</Name>
@@ -93,8 +92,14 @@ const CIcon=styled.div`
   font-size: 13px;
   display: flex;
   flex-direction: column;
-  @media (max-width:768px){
-    font-size: 10px;
+  @media (max-width:768px) and (min-width:500px){
+    font-size:10px;
+  }
+  @media (max-width:1280px) and (min-width:769px){
+    
+  }
+  @media (max-width:1440px) and (min-width:1290px){
+    font-size:19px;
   }
 `;
 const ColIcon=styled.div`
@@ -104,8 +109,14 @@ const ColIcon=styled.div`
   gap: 10px;
   display: flex;
   flex-direction: column;
-  @media (max-width:768px){
-    font-size: 10px;
+  @media (max-width:768px) and (min-width:500px){
+    font-size:10px;
+  }
+  @media (max-width:1280px) and (min-width:769px){
+    
+  }
+  @media (max-width:1440px) and (min-width:1290px){
+    font-size:19px;
   }
 `;
 const AContent=styled.div`
@@ -123,6 +134,15 @@ const Stitle=styled.div`
   font-family: poppins;
   font-size: 14px;
   font-weight: 500;
+  @media (max-width:768px) and (min-width:500px){
+    
+  }
+  @media (max-width:1280px) and (min-width:769px){
+    
+  }
+  @media (max-width:1440px) and (min-width:1290px){
+    font-size:19px;
+  }
 `;
 const Techs=styled.div`
   display: grid;
@@ -168,7 +188,16 @@ const Hello=styled.div`
       50% { transform: rotate(10.0deg) }
       60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
       100% { transform: rotate( 0.0deg) }
-}
+  }
+  @media (max-width:768px) and (min-width:500px){
+    
+  }
+  @media (max-width:1280px) and (min-width:769px){
+    
+  }
+  @media (max-width:1440px) and (min-width:1290px){
+    font-size:70px;
+  }
 `;
 const Content=styled.div`
   position: relative;
@@ -205,6 +234,15 @@ const Subcontent=styled.div`
     z-index: 1;
     border: 2px #9E3FFD solid;
   }
+  @media (max-width:768px) and (min-width:500px){
+    
+  }
+  @media (max-width:1280px) and (min-width:769px){
+    
+  }
+  @media (max-width:1440px) and (min-width:1290px){
+    
+  }
 `;
 
 const Scontent=styled.div`
@@ -223,6 +261,21 @@ const Scontent=styled.div`
     transform: scale(1.05);
     z-index: 1;
     border: 2px #9E3FFD solid;
+  }
+  @media (max-width:768px) and (min-width:500px){
+    
+  }
+  @media (max-width:1024px) and (min-width:769px){
+    
+  }
+  @media (max-width:1280px) and (min-width:1025px){
+    
+  }
+  @media (max-width:1440px) and (min-width:1290px){
+    font-size:22px;
+  }
+  @media (max-width:1600px) and (min-width:1441px){
+    font-size:24px;
   }
 `;
 
@@ -259,14 +312,46 @@ const About=styled.div`
     from{border-right-color: rgba(255,255,255,.75);}
     to{border-right-color: transparent;}  
   }
+  @media (max-width:768px) and (min-width:500px){
+    
+  }
+  @media (max-width:1024px) and (min-width:769px){
+    
+  }
+  @media (max-width:1280px) and (min-width:1025px){
+    
+  }
+  @media (max-width:1440px) and (min-width:1290px){
+    
+  }
+  @media (max-width:1600px) and (min-width:1441px){
+    font-size:25px;
+  }
 `;
 const Name=styled.div`
   font-size: 35px;
   font-weight: 600;
   letter-spacing: 2px;
-  @media (max-width:768px){
-      font-size: 33px;
-      letter-spacing: 3px;
+  @media (max-width:500px){
+    font-size:32px;
+  }
+  @media (max-width:768px) and (min-width:501px){
+    position:relative;
+    top:10%;
+    font-size: 33px;
+    letter-spacing: 3px;
+  }
+    @media (max-width:1024px) and (min-width:769px){
+      
+    }
+    @media (max-width:1280px) and (min-width:1025px){
+      
+    }
+    @media (max-width:1440px) and (min-width:1290px){
+      font-size:37px;
+    }
+    @media (max-width:1600px) and (min-width:1441px){
+      font-size:38px;
     }
 `;
 const Intro=styled.div`
@@ -278,15 +363,32 @@ const Intro=styled.div`
   top: 50%;
   width: 70%;
   text-align: center;
-  @media (max-width:1100px){
-        line-height: 50px;
-      } 
-      @media (max-width:768px){
+  
+    @media (max-width:500px){
+      width: 100%;
+      top: 70%;
+      left: 0;
+      position: absolute;
+      line-height: 70px;
+    }
+    @media (max-width:768px) and (min-width:501px){
       width: 100%;
       top: 65%;
       left: 0;
       position: absolute;
       line-height: 70px;
+    }
+    @media (max-width:1024px) and (min-width:769px){
+      
+    }
+    @media (max-width:1280px) and (min-width:1025px){
+      line-height: 50px;
+    }
+    @media (max-width:1440px) and (min-width:1290px){
+      
+    }
+    @media (max-width:1600px) and (min-width:1441px){
+      
     }
 `;
 const Iconbar=styled.div`
@@ -310,6 +412,18 @@ const Icon=styled.a`
   font-size: 20px;
   &:hover{
     color: #9E3FFD;
+  }
+  @media (max-width:768px) and (min-width:500px){
+    
+  }
+  @media (max-width:1280px) and (min-width:769px){
+    font-size:22px;
+  }
+  @media (max-width:1440px) and (min-width:1290px){
+    font-size:23px;
+  }
+  @media (max-width:1600px) and (min-width:1441px){
+    font-size:25px;
   }
 `;
 const Icons=styled.div`
@@ -361,8 +475,43 @@ const Circle=styled.div`
       width: 120%;
     }
   }
-  @media (max-width:768px){
-    top: 10%;
+  @media (max-width:500px){
+    top:10%;
+    left:28%;
+    height: 120px;
+    width: 160px;
+    @media (max-height:690px){
+      top:10%;
+      left:28%;
+      height: 90px;
+      width: 130px;
+    }
+  }
+  @media (max-width:768px) and (min-width:501px){
+    top:10%;
+    left:38%;
+    height: 120px;
+    width: 160px;
+  }
+  @media (max-width:1024px) and (min-width:769px){
+    height: 100px;
+    width: 130px;
+    left:27%;
+  }
+  @media (max-width:1280px) and (min-width:1025px){
+    left:31%;
+    height: 100px;
+    width: 130px;
+  }
+  @media (max-width:1440px) and (min-width:1290px){
+    left:30%;
+    height:120px;
+    width:160px;
+  }
+  @media (max-width:1600px) and (min-width:1441px){
+    left:29%;
+    height:130px;
+    width:175px;
   }
 `;
 const Homepage=styled.div`
@@ -370,14 +519,33 @@ const Homepage=styled.div`
   width: 95%;
   display: flex;
   background-image: linear-gradient(#232140,#d7d6dc);
-  left: 5%;
+  left: 5%; 
   @media (max-width:768px){
-      left: 0;
-      width: 100%;
-      display: flex;
-      height: 160vh;
-      flex-direction: column-reverse;
-  }           
+    left: 0;
+    width: 100%;
+    display: flex;
+    height: 150vh;
+    flex-direction: column-reverse;
+  }
+  @media (max-width:965px) and (min-width:769px){
+    left: 0;
+    width: 100%;
+    display: flex;
+    height: 160vh;
+    flex-direction: column-reverse;
+  }
+  @media (max-width:1024px) and (min-width:966px){
+    
+  }
+  @media (max-width:1280px) and (min-width:1025px){
+    
+  }
+  @media (max-width:1440px) and (min-width:1290px){
+    
+  }
+  @media (max-width:1600px) and (min-width:1441px){
+    
+  }       
 `;
 
 export default Home

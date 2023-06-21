@@ -93,7 +93,7 @@ function Contact() {
                 <a href='https://www.instagram.com/_dearam_3/'>
                   <FiInstagram className='instagram'/>
                 </a>
-                <a href=''>
+                <a href='https://github.com/dearam'>
                   <FiTwitter className='twitter'/>
                 </a>
                 <a href='https://wa.me/9360648114'>

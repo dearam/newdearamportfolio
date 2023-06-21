@@ -1,4 +1,4 @@
-import React,{useRef,useState} from 'react'
+import React,{useRef} from 'react'
 import styled from 'styled-components'
 import './title.scss'
 
@@ -9,8 +9,7 @@ import { FiGithub,FiLinkedin,FiInstagram,FiTwitter} from "react-icons/fi";
 import { FaWhatsapp,FaSpotify } from "react-icons/fa";
 import emailjs from '@emailjs/browser';
 import {ReactComponent as Svgimage} from "./first logo.svg"
-import mail from "../mail.svg"
-import logo from "./first logo.png";
+
 
 
 
@@ -44,7 +43,7 @@ function Contact() {
         <PDetails>
           <PDetail>
             <a className='nodecoration' href="https://goo.gl/maps/Y3Wz4CftxznBJth6A">
-              <a className="aicon">
+              <a className="aicon" href="https://goo.gl/maps/Y3Wz4CftxznBJth6A">
                   <FiMapPin className='icon' ></FiMapPin>
                 </a>
               <Detail>Madurai,India</Detail>
@@ -52,7 +51,7 @@ function Contact() {
           </PDetail>
           <PDetail>
             <a className='nodecoration' href="tel:+919360648114">
-              <a className="aicon">
+              <a className="aicon" href="tel:+919360648114">
                   <FiPhoneCall className='icon'></FiPhoneCall>
               </a>
               <Detail>+(91) 93606 48114</Detail>
@@ -60,7 +59,7 @@ function Contact() {
           </PDetail>
           <PDetail>
             <a className="nodecoration" href="mailto:ramprasath2709@gmail.com">
-              <a className="aicon">
+              <a className="aicon" href="mailto:ramprasath2709@gmail.com">
                 <MdOutlineAlternateEmail className='icon'></MdOutlineAlternateEmail>
               </a>
             <Detail>ramprasath2709@gmail.com</Detail>
@@ -152,10 +151,7 @@ function Contact() {
   )
 }
 
-const Logoimage=styled.div`
-  
-  
-`;
+
 const Mform=styled.div`
   height:65%;
   width:80%;
@@ -432,13 +428,7 @@ const Mmain=styled.div`
   }
 
 `;
-const Mbox=styled.div`
-height:100%;
-width:100%;
-display:flex;
-align-items:center;
-justify-content:center;
-`;
+
 const Designer=styled.div`
   font-family:poppins;
   font-size:14px;

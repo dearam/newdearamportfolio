@@ -1,4 +1,4 @@
-import React,{ useState, useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import {  } from "react-icons/md";
 import { BiHomeSmile } from "react-icons/bi";

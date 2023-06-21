@@ -441,7 +441,7 @@ const Aboutpage=styled.div`
   position: absolute;
   width: 95%;
   display: flex;
-  background-image: linear-gradient(#232140,#d7d6dc);
+  background-image: linear-gradient(#120440,#6C8EBF);
   left: 5%;
   @media (max-width:768px){
       left: 0;

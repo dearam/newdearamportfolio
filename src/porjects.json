@@ -3,8 +3,8 @@
         "name":"Python",
         "fullname":"Python Weather api",
         "description":"Getting weather of the particular city with the use of python and OpenWeather api.It retrieve all the datas of the city and displays the weather of the city in Nextpage.",
-        "technologies":["python","OpenWeather api","Flask"],
-        "image":"./images/weatherpy.png",
+        "technologies":["python","api","Flask"],
+        "image":"./images/weather.jpg",
         "Wlink":"",
         "Glink":"https://github.com/dearam/CYBER-SECURITY-RAM-PRASATH"
     },
@@ -21,7 +21,7 @@
         "name":"Video Search",
         "fullname":"React Video Search",
         "description":"This app is like Youtube and it's worked with the use of Youtube api.It uses Redux concepts for video retrieving fully React based app.It shows Recomended videos also on the side bar.",
-        "technologies":["Youtubeapi","Reactjs","Redux"],
+        "technologies":["api","Reactjs","Redux"],
         "image":"./images/videosearcho.jpg",
         "Wlink":"",
         "Glink":"https://github.com/dearam/video-serch"
@@ -39,7 +39,7 @@
         "name":"Audiobook",
         "fullname":"Py Audiobook",
         "description":"This program working with the help of pytxt3 module.It converts the text to speech and It's retreived from ibm watson text to speech.",
-        "technologies":["Python3","ibm watson","pytxt3"],
+        "technologies":["Python3","ibm","pytxt3"],
         "image":"./images/audiobook.jpg",
         "Wlink":"",
         "Glink":"https://github.com/dearam/Audiobook-py"
@@ -57,7 +57,7 @@
         "name":"Mask Detection",
         "fullname":"Python Mask Detection",
         "description":"Created a model for mask detection in quarantime.I used linear regression and CNN for this  model.It is working with the use of keras and opencv",
-        "technologies":["Pyhton3","opencv","Keras"],
+        "technologies":["Py","opencv","Keras"],
         "image":"./images/mask.jpeg",
         "Wlink":"",
         "Glink":""
@@ -84,7 +84,7 @@
         "name":"Disney+hotstar Clone",
         "fullname":"Disnephotstar Clone",
         "description":"I developed Disney+hotstar clone web app with use of react and used firebase for authentication purpose.Whole design is handled by React styled components.it contains 8.",
-        "technologies":["Reactjs","firebase","React-styled"],
+        "technologies":["Reactjs","firebase","styled"],
         "image":"./images/disney.jpg",
         "Wlink":"https://dearam-disneyplus-clone.vercel.app/home",
         "Glink":"https://github.com/dearam/React-Disneyplus-clone"
@@ -93,7 +93,7 @@
         "name":"Checkbox",
         "fullname":"Checkbox With React",
         "description":"A react tree view componet and its a single component with two views.It retrieve all those datas from json file and displayed as checkbox.Checkedbox list will showed on the ther page with the count.",
-        "technologies":["Reactjs","Json","React-styled"],
+        "technologies":["Reactjs","Json","styled"],
         "image":"./images/check.png",
         "Wlink":"",
         "Glink":"https://github.com/dearam/Checkboxwithreact"

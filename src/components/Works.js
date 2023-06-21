@@ -10,7 +10,7 @@ function Works() {
       <Etitle>
           <Career className='career'>Works</Career>
           <Flow className='flow'>Done</Flow>
-        </Etitle>
+      </Etitle>
       <Mainmap>
       {data.map((node)=>{
         return(
@@ -51,12 +51,77 @@ function Works() {
         )
       })}
       </Mainmap>
+      <Footer>
+        <Designer>Designed and Developed with 🤍 by DEARAM</Designer>
+        <Designer>2023 India</Designer>
+      </Footer>
     </Workspage>
   )
 }
+
+const Footer=styled.div`
+  position:absolute;
+  background-color:#0a012a;
+  width:100%;
+  height:50px;
+  bottom:0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  @media (max-width:320px){
+    
+  }
+  @media (max-width:425px) and (min-width:320px){
+    height:80px;
+    @media (max-height:620px){
+      
+    }
+  }
+  @media (max-width:768px) and (min-width:425px){
+    
+  }
+`;
+
+const Designer=styled.div`
+  font-family:poppins;
+  font-size:14px;
+  color:#767776;
+  @media (max-width:320px){
+    font-size:10px;
+    @media (max-height:690px){
+      
+    }
+  }
+  @media (max-width:426px) and (min-width:320px){
+    font-size:10px;
+    @media (max-height:651px) and (min-height:500px){
+      
+    }
+    @media (max-height:700px) and (min-height:651px){
+      
+    }
+    @media (max-height:800px) and (min-height:700px){
+      
+    }
+    @media (max-height:900px) and (min-height:800px){
+      
+    }
+  }
+  @media (max-width:768px) and (min-width:426px){
+    
+  }
+  @media (max-width:1280px) and (min-width:769px){
+    
+  }
+  @media (max-width:1440px) and (min-width:1290px){
+    
+  }
+`;
+
 const Career=styled.div`
   position: relative;
-  color: #0a012a;
+  color: white;
 `;
 const Flow=styled.div`
   top:8px;
@@ -182,12 +247,12 @@ const NInnerbox=styled.div`
 `;
 
 const Shade=styled.div`
-  height: 80%;
-  width: 100%;
   position: absolute;
-  top: 0;
-  background: linear-gradient(to bottom,rgba(4,8,15,0), #0a012a 100%);
-  z-index: 2;
+  bottom:0;
+  border-radius:10px;
+  // background: linear-gradient(to bottom,rgba(4,8,15,0), #0a012a 100%);
+  background-color:#0a012a;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -196,13 +261,13 @@ const Shade=styled.div`
 `;
 const Imgbox=styled.div`
   height: 80%;
-  border-radius: 10px;
   width: 100%;
   background-color: #fff;
+  border-radius:10px 10px 0px 0px;
   img{
     z-index: 1;
-    border-radius: 10px;
     object-fit: cover;
+    border-radius:10px 10px 0px 0px;
     position: relative;
     inset: 0;
     height: 100%;
@@ -245,17 +310,18 @@ const Sidetitle=styled.div`
   font-style: italic;
   font-weight: 500;
   color: #fff;
-  top: 80%;
+  top: 85%;
   letter-spacing: 2px;
   align-items: flex-end;
   justify-content: center;
+  transition: all 0.2s linear 0s;
   width: 100%;
   font-size: 20px;
   position: absolute;
   z-index: 1;
   @media (max-width:768px){
         font-size: 14px;
-      }
+  }
 `;
 const Nbox=styled.div`
   left: 2%;
@@ -292,7 +358,7 @@ const NMain=styled.div`
       left: -9%;
       @media (max-width:768px){
         font-size: 10px;
-        left: -10%;
+        left: -13%;
       }
     }
     .imgbox{
@@ -309,6 +375,9 @@ const NMain=styled.div`
         z-index: 1;
         border-color: rgba(249,249,249,0.8);
     }
+  }
+  @media (max-width:426px){
+    height:190px;
   }
 `;
 const Mainmap=styled.div`
@@ -328,6 +397,8 @@ const Mainmap=styled.div`
     }
     @media (max-width:425px) and (min-width:320px){
       top:5%;
+      grid-row-gap: 0px;
+      grid-gap: 5px;
       height: 80%;
       grid-template-columns: repeat(2,minmax(0,1fr));
       @media (max-height:620px){
@@ -343,7 +414,7 @@ const Mainmap=styled.div`
 
 const Workspage=styled.div`
     position: relative;
-    background-image: linear-gradient(#232140,#d7d6dc);
+    background-image: linear-gradient(#120440,#6C8EBF); 
     width: 95%;
     height: 200vh;
     left: 5%;

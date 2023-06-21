@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useState, useEffect } from 'react'
 import styled from 'styled-components'
 import {  } from "react-icons/md";
 import { BiHomeSmile } from "react-icons/bi";
@@ -9,31 +9,20 @@ import { TiContacts } from "react-icons/ti";
 import { BsPencilSquare } from "react-icons/bs";
 import {NavLink} from "react-router-dom"
 import '../App.css'
+import { ReactComponent as Logo } from './squarelogo.svg'
 
 function Navigationbar() {
-
-   // var btns=btnContainer.getElementsByClassName("list");
-    // for(var i=0;i<btns.length;i++){
-    //     btns[i].addEventListener('click',function(){
-    //         var current=document.getElementsByClassName("active");
-    //         current[0].className=current[0].className.replace("active");
-    //         this.className+="active";
-    //     })
-    // }
-
-        
+   
 
   return (
         <NavMenu>
-            <Bitemoji>
-                <img src='./images/bitemo.png' alt="dearam"/>
-            </Bitemoji>
+            <Logo className='logo'/>
             <Grid>
                 <NavLink  to="/" className="normal" 
                     style={({isActive})=>{return {
-                        color: isActive?'#0a012a':'',
-                        background:isActive?"#e9ecef":"",
-                        borderRadius:isActive?"500px 0px 0px 500px":"",
+                        color: isActive?'#9E3FFD':'',
+                        background:isActive?"rgb(158, 63, 253,0.2)":"",
+                        borderRadius:isActive?"10px":"",
                       
                     }}}>
                         <Content >
@@ -43,31 +32,32 @@ function Navigationbar() {
                     </NavLink>
                 <NavLink  to="/about" className="normal" 
                     style={({isActive})=>{return {
-                        color: isActive?'#0a012a':'',
-                        background:isActive?"#e9ecef":"",
-                        borderRadius:isActive?"500px 0px 0px 500px":"",
+                        color: isActive?'#9E3FFD':'',
+                        background:isActive?"rgb(158, 63, 253,0.2)":"",
+                        borderRadius:isActive?"10px":"",
+                        
                     }}}>
                     <Content >
                         <RiPagesLine className='home'/>
                         <Name>About</Name>
                     </Content>
                 </NavLink>
-                <NavLink  to="/bio" className="normal" 
+                <NavLink  to="/career" className="normal" 
                     style={({isActive})=>{return {
-                        color: isActive?'#0a012a':'',
-                        background:isActive?"#e9ecef":"",
-                        borderRadius:isActive?"500px 0px 0px 500px":"",
+                        color: isActive?'#9E3FFD':'',
+                        background:isActive?"rgb(158, 63, 253,0.2)":"",
+                        borderRadius:isActive?"10px":"",
                     }}}>
                     <Content >
                         <BsPencilSquare className='home'/>
-                        <Name>Bio</Name>
+                        <Name>Career</Name>
                     </Content>
                 </NavLink>
                 <NavLink  to="/works" className="normal" 
                     style={({isActive})=>{return {
-                        color: isActive?'#0a012a':'',
-                        background:isActive?"#e9ecef":"",
-                        borderRadius:isActive?"500px 0px 0px 500px":"",
+                        color: isActive?'#9E3FFD':'',
+                        background:isActive?"rgb(158, 63, 253,0.2)":"",
+                        borderRadius:isActive?"10px":"",
                     }}}>
                     <Content >
                         <FiBriefcase className='home'/>
@@ -76,9 +66,9 @@ function Navigationbar() {
                 </NavLink>
                 <NavLink  to="contact" className="normal" 
                     style={({isActive})=>{return {
-                        color: isActive?'#0a012a':'',
-                        background:isActive?"#e9ecef":"",
-                        borderRadius:isActive?"500px 0px 0px 500px":"",
+                        color: isActive?'#9E3FFD':'',
+                        background:isActive?"rgb(158, 63, 253,0.2)":"",
+                        borderRadius:isActive?"10px":"",
                     }}}>
                     <Content>
                         <TiContacts className='home'/>
@@ -86,23 +76,12 @@ function Navigationbar() {
                     </Content>
                 </NavLink>  
             </Grid>
+            
+
         </NavMenu>
   )
 }
 
-const Bitemoji=styled.div`
-    position: absolute;
-    display: flex;
-    top: 5%;
-    img{
-        position: relative;
-        width: 40px;
-        height: 40px;
-    }
-    @media (max-width:768px){
-        display: none;
-    }
-`;
 
 const NavMenu=styled.div`
     height: 100%;
@@ -116,10 +95,12 @@ const NavMenu=styled.div`
         background-color: rgba(10,1,42,0.5);
         position: fixed;
         bottom: 20px;
-        width: 90%;
-        left:5%;
+        width: 55%;
+        left:24%;
         z-index: 5;
-        height: 6.5%;
+        height: 6%;
+        justify-content:center;
+        align-items:center;
         border:1px solid white;
         border-radius: 100px;
     }
@@ -128,11 +109,22 @@ const NavMenu=styled.div`
         position: fixed;
         bottom: 30px;
         width: 50%;
-        left:25%;
+        left:30%;
         z-index: 5;
+        justify-content:center;
         height: 6.5%;
         border:1px solid white;
         border-radius: 100px;
+    }
+    .logo{
+        position: absolute;
+        display: flex;
+        top: 5%;
+        height:40px;
+        width:40px;
+        @media (max-width:768px){
+            display: none;
+        }
     }
 `;
 
@@ -162,8 +154,8 @@ const Grid=styled.div`
             width: 30px;
             @media (max-width:768px){
                 top:5px;
-                height:25px;
-                width:25px;
+                height:20px;
+                width:20px;
             }
         }
     }
@@ -174,7 +166,7 @@ const Grid=styled.div`
         left: 15%;
         display: grid;
         grid-gap: 0;
-        grid-template-columns: repeat(5,minmax(50px,auto));
+        grid-template-columns: repeat(5,minmax(40px,auto));
     }
     
 `;

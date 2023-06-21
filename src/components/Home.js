@@ -12,7 +12,12 @@ function Home() {
       <Right>
         <Content>
           <Main>
-            <Hello>Hey Folks<span class="wave">🐣</span></Hello>
+            <Hello>
+              <span className='hey'>
+                Hey
+              </span>
+               Folks<span class="wave">🐣</span>
+              </Hello>
             <Scontent>
               I'm Ram prasath Front-end Developer. My motivation and love for development as well as good design have brought me to where I am today. Every day I try to keep up with latest technology trends. I developed some basic apps with use of Reactjs. Apart from technologies I love to do digital illustration,Photographic📷 and hear songs🎶. Learn from Surroundings Earn From own Knowledge💙.
             </Scontent>
@@ -44,9 +49,7 @@ function Home() {
                 </ColIcon>
               </AContent>
             </Subcontent>
-            
           </Grid>
-            
         </Content>
       </Right>
       <Left>  
@@ -171,6 +174,9 @@ const Hello=styled.div`
   font-family: poppins;
   color: #fff;
   margin: 10px 10px 50px 0px;
+  .hey{
+    color:#9E3FFD;
+  }
   .wave {
     animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
     animation-duration: 2.5s;        /* Change to speed up or slow down */
@@ -189,7 +195,32 @@ const Hello=styled.div`
       60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
       100% { transform: rotate( 0.0deg) }
   }
-  @media (max-width:768px) and (min-width:500px){
+  @media (max-width:320px){
+    
+    @media (max-height:690px){
+      
+    }
+  }
+  @media (max-width:426px) and (min-width:320px){
+    position:relative;
+    top:30px;
+    font-size:40px;
+      
+    }
+    @media (max-height:651px) and (min-height:500px){
+      
+    }
+    @media (max-height:700px) and (min-height:651px){
+      
+    }
+    @media (max-height:800px) and (min-height:700px){
+      
+    }
+    @media (max-height:900px) and (min-height:800px){
+      
+    }
+  }
+  @media (max-width:768px) and (min-width:426px){
     
   }
   @media (max-width:1280px) and (min-width:769px){
@@ -204,7 +235,8 @@ const Content=styled.div`
   @media (max-width:768px){
     position: relative;
     top: -50px;
-      background-color: #111;
+    height:110%;
+    background-color: #111;
     }
 `;
 const Grid=styled.div`
@@ -312,7 +344,33 @@ const About=styled.div`
     from{border-right-color: rgba(255,255,255,.75);}
     to{border-right-color: transparent;}  
   }
-  @media (max-width:768px) and (min-width:500px){
+
+  @media (max-width:320px){
+    
+    @media (max-height:690px){
+      
+    }
+  }
+  @media (max-width:426px) and (min-width:320px){
+      
+    @media (max-height:500px){
+      
+    }
+    @media (max-height:620px) and (min-height:500px){
+      
+    }
+    @media (max-height:700px) and (min-height:620px){
+      
+    }
+    @media (max-height:800px) and (min-height:700px){
+      
+    }
+    @media (max-height:900px) and (min-height:800px){
+      
+    }
+  }
+
+  @media (max-width:768px) and (min-width:426px){
     
   }
   @media (max-width:1024px) and (min-width:769px){
@@ -332,10 +390,31 @@ const Name=styled.div`
   font-size: 35px;
   font-weight: 600;
   letter-spacing: 2px;
-  @media (max-width:500px){
+  @media (max-width:320px){
     font-size:32px;
+    @media (max-height:690px){
+      
+    }
   }
-  @media (max-width:768px) and (min-width:501px){
+  @media (max-width:426px) and (min-width:320px){
+    font-size:32px;
+    @media (max-height:500px){
+      
+    }
+    @media (max-height:651px) and (min-height:500px){
+      
+    }
+    @media (max-height:700px) and (min-height:651px){
+      
+    }
+    @media (max-height:800px) and (min-height:700px){
+      
+    }
+    @media (max-height:900px) and (min-height:800px){
+      
+    }
+  }
+  @media (max-width:768px) and (min-width:426px){
     position:relative;
     top:10%;
     font-size: 33px;
@@ -363,18 +442,41 @@ const Intro=styled.div`
   top: 50%;
   width: 70%;
   text-align: center;
-  
-    @media (max-width:500px){
+  @media (max-width:320px){
+    width: 100%;
+      top: 70%;
+      left: 0;
+      position: absolute;
+      line-height: 70px;
+    @media (max-height:690px){
+      
+    }
+  }
+  @media (max-width:426px) and (min-width:320px){
       width: 100%;
       top: 70%;
       left: 0;
       position: absolute;
       line-height: 70px;
+    
+    @media (max-height:656px){
+      top:20%;
     }
-    @media (max-width:768px) and (min-width:501px){
+    @media (max-height:700px) and (min-height:656px){
+      
+    }
+    @media (max-height:800px) and (min-height:700px){
+      
+    }
+    @media (max-height:900px) and (min-height:800px){
+      
+    }
+  }
+  
+    @media (max-width:768px) and (min-width:426px){
       width: 100%;
-      top: 65%;
-      left: 0;
+      top: 30%;
+      left: 15%;
       position: absolute;
       line-height: 70px;
     }
@@ -432,26 +534,107 @@ const Icons=styled.div`
   flex-direction: column;
   gap: 30px;
 `;
+//undertext
 const Right=styled.div`
   flex: 1;
-  @media (max-width:768px){
-      position: relative;
+  @media (max-width:320px){
+    position: relative;
       flex: 3;
-      background-color: #111;
+      background-color: white;
+      border-radius: 0;
+    @media (max-height:690px){
+      
+    }
+  }
+  @media (max-width:376px) and (min-width:320px){
+    position: relative;
+      flex: 2;
+      height:20vh;
+      background-color: white;
+      border-radius: 0;
+  }
+  @media (max-width:426px) and (min-width:376px){
+    position: relative;
+      flex: 1;
+      background-color: white;
+      border-radius: 0;
+    @media (max-height:651px) and (min-height:500px){
+      
+    }
+    @media (max-height:700px) and (min-height:651px){
+      
+    }
+    @media (max-height:800px) and (min-height:700px){
+      
+    }
+    @media (max-height:850px) and (min-height:800px){
+      
+    }
+  }
+  @media (max-width:768px) and (min-width:426px){
+    position: relative;
+      flex: 3;
+      background-color: white;
       border-radius: 0;
   }
 `;
+
+// photo
 const Left=styled.div`
-  flex: 1;
+  flex: 1.5;
   background-color: #0a012a;
   height: 100vh;
   border-radius: 1000px 0px 0px 1000px;
   border: 2px solid #9E3FFD;
   justify-content: center;
   align-items: center;
-  @media (max-width:768px){
-      flex: 1;
+
+  @media (max-width:320px){
+    flex: 2;
       border:none;
+      height:50vh;
+      background-color: #0a012a;
+      position: relative;
+      border-radius: 0;
+    @media (max-height:690px){
+      
+    }
+  }
+  @media (max-width:376px) and (min-width:320px){
+    flex: 1;
+    border:none;
+    height:50vh;
+    background-color: #0a012a;
+    position: relative;
+    border-radius: 0;
+  }
+  @media (max-width:426px) and (min-width:376px){
+    flex: 1;
+      border:none;
+      height:50vh;
+      background-color: #0a012a;
+      position: relative;
+      border-radius: 0;
+    @media (max-height:651px) and (min-height:500px){
+      
+    }
+    @media (max-height:700px) and (min-height:651px){
+      
+    }
+    @media (max-height:800px) and (min-height:700px){
+      flex:2;
+      height:100vh;
+      background-color: #0a012a;
+    }
+    @media (max-height:850px) and (min-height:800px){
+      flex:2;
+      height:70vh;
+    }
+  }
+  @media (max-width:768px) and (min-width:426px){
+    flex: 1;
+      border:none;
+      height:50vh;
       background-color: #0a012a;
       position: relative;
       border-radius: 0;
@@ -475,7 +658,7 @@ const Circle=styled.div`
       width: 120%;
     }
   }
-  @media (max-width:500px){
+  @media (max-width:320px){
     top:10%;
     left:28%;
     height: 120px;
@@ -487,9 +670,33 @@ const Circle=styled.div`
       width: 130px;
     }
   }
-  @media (max-width:768px) and (min-width:501px){
+  @media (max-width:426px) and (min-width:320px){
     top:10%;
-    left:38%;
+    left:28%;
+    height: 120px;
+    width: 160px;
+    @media (max-height:500px){
+      display:none;
+    }
+    @media (max-height:662px) and (min-height:500px){
+      display:none;
+    }
+    @media (max-height:700px) and (min-height:662px){
+      height: 90px;
+      width: 130px;
+    }
+    @media (max-height:800px) and (min-height:700px){
+      height: 100px;
+      width: 140px;
+    }
+    @media (max-height:900px) and (min-height:800px){
+      height: 100px;
+      width: 140px;
+    }
+  }
+  @media (max-width:768px) and (min-width:426px){
+    top:10%;
+    left:4%;
     height: 120px;
     width: 160px;
   }
@@ -518,7 +725,8 @@ const Homepage=styled.div`
   position: absolute;
   width: 95%;
   display: flex;
-  background-image: linear-gradient(#232140,#d7d6dc);
+  // background-image: linear-gradient( #120440 ,#d7d6dc);
+  background-image: linear-gradient(#120440,#6C8EBF); 
   left: 5%; 
   @media (max-width:768px){
     left: 0;

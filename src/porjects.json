@@ -1,7 +1,7 @@
 [
     {
         "name":"Python Weather api",
-        "fullname":"weather api",
+        "fullname":"Weather Api",
         "description":"Getting weather of the particular city with the use of python and OpenWeather api.It retrieve all the datas of the city and displays the weather of the city in Nextpage.",
         "technologies":["python","api","Flask"],
         "image":"./images/weather.jpg",

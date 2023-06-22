@@ -22,22 +22,26 @@ function Contact() {
 
     emailjs.sendForm('service_imwq6eh', 'template_ppsdfr5', form.current, 'user_ANOg3A3wlIkYILyVv8CFA')
       .then((result) => {
-          console.log(result.text);
-          document.getElementById("form").style="display:none;";
-          document.getElementById("form_submit").style="color:#00fdcf";
+        document.getElementById("form").style="display:none;";
+        document.getElementById("form_submit").style="color:#00fdcf";
+        const mediaQuery = window.matchMedia("(max-width: 768px)");
+        if(mediaQuery.matches){
+          document.getElementById("main").style="height:40%;width:60%;transition: all 0.2s linear 0s;border:2px solid white;";
+          document.getElementById("cover").style=`
+            top:20%;
+            width:63.7%;
+            transition: all 0.2s linear 0s;
+            `;
+            document.getElementById("success_btn").style="font-size:10px;display:flex;justify-content:center;align-items:center;"
+        }else{
           document.getElementById("main").style="height:50%;width:60%;transition: all 0.2s linear 0s;border:2px solid white;";
           document.getElementById("cover").style=`
-              top:26.1%;
-              width:63.7%;
-              transition: all 0.2s linear 0s;
-              `;
-              const mediaQuery = window.matchMedia("(max-width: 768px)");
-  if(mediaQuery.matches){
-    
-  }else{
-
-  }
+            top:26.1%;
+            width:63.7%;
+            transition: all 0.2s linear 0s;
+            `;
           document.getElementById("success_btn").style="display:flex;justify-content:center;align-items:center;";
+        }
       }, (error) => {
           console.log(error.text);
       });
@@ -45,26 +49,7 @@ function Contact() {
 
   const sendDummy = (e) => {
           e.preventDefault();
-          document.getElementById("form").style="display:none;";
-          document.getElementById("form_submit").style="color:#00fdcf";
-          const mediaQuery = window.matchMedia("(max-width: 768px)");
-          if(mediaQuery.matches){
-            document.getElementById("main").style="height:40%;width:60%;transition: all 0.2s linear 0s;border:2px solid white;";
-            document.getElementById("cover").style=`
-              top:20%;
-              width:63.7%;
-              transition: all 0.2s linear 0s;
-              `;
-              document.getElementById("success_btn").style="font-size:10px;display:flex;justify-content:center;align-items:center;"
-          }else{
-            document.getElementById("main").style="height:50%;width:60%;transition: all 0.2s linear 0s;border:2px solid white;";
-            document.getElementById("cover").style=`
-              top:26.1%;
-              width:63.7%;
-              transition: all 0.2s linear 0s;
-              `;
-            document.getElementById("success_btn").style="display:flex;justify-content:center;align-items:center;";
-          }
+          
           
   }
 
@@ -156,7 +141,7 @@ function Contact() {
         </Mcover>
         <Mmain id='main'>
           <Mform>
-            <form ref={form} onSubmit={sendDummy} id='form'>
+            <form ref={form} onSubmit={sendEmail} id='form'>
               <input id="name" type="text" placeholder='Name' name='user_name' autoFocus required/>
               <input id="email" type="email" placeholder='Email' name="user_email" required/>
               <textarea id="message" placeholder='Hello ram i have a project to discuss with you.' name='message' required  ></textarea>

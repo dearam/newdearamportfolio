@@ -47,12 +47,6 @@ function Contact() {
       });
   };
 
-  const sendDummy = (e) => {
-          e.preventDefault();
-          
-          
-  }
-
   return (
     <Contactpage>
       <Right>

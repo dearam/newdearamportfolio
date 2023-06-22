@@ -13,10 +13,7 @@ function Home() {
         <Content>
           <Main>
             <Hello>
-              <span className='hey'>
-                Hey
-              </span>
-               Folks<span class="wave">🐣</span>
+                Hey Folks<span class="wave">🐣</span>
               </Hello>
             <Scontent>
               I'm Ram prasath Front-end Developer. My motivation and love for development as well as good design have brought me to where I am today. Every day I try to keep up with latest technology trends. I developed some basic apps with use of Reactjs. Apart from technologies I love to do digital illustration,Photographic📷 and hear songs🎶. Learn from Surroundings Earn From own Knowledge💙.
@@ -48,7 +45,7 @@ function Home() {
                   PSNA COLLEGE
                 </ColIcon>
               </AContent>
-            </Subcontent>
+            </Subcontent> 
           </Grid>
         </Content>
       </Right>
@@ -435,11 +432,11 @@ const Name=styled.div`
 `;
 const Intro=styled.div`
   color: #fff;
-  left: 20%;
+  left: 16%;
   line-height: 80px;
   font-family: poppins;
   position: relative;
-  top: 50%;
+  top:55%;
   width: 70%;
   text-align: center;
   @media (max-width:320px){
@@ -555,7 +552,7 @@ const Right=styled.div`
   }
   @media (max-width:426px) and (min-width:376px){
     position: relative;
-      flex: 1;
+      flex: 2;
       background-color: white;
       border-radius: 0;
     @media (max-height:651px) and (min-height:500px){
@@ -622,13 +619,11 @@ const Left=styled.div`
       
     }
     @media (max-height:800px) and (min-height:700px){
-      flex:2;
-      height:100vh;
-      background-color: #0a012a;
+      
     }
     @media (max-height:850px) and (min-height:800px){
-      flex:2;
-      height:70vh;
+      flex:1.5;
+      height:60vh;
     }
   }
   @media (max-width:768px) and (min-width:426px){
@@ -690,8 +685,14 @@ const Circle=styled.div`
       width: 140px;
     }
     @media (max-height:900px) and (min-height:800px){
-      height: 100px;
-      width: 140px;
+      height: 120px;
+      left:25%;
+      width: 160px;
+    }
+    @media (min-height:900px){
+      height: 130px;
+      left:24%;
+      width: 170px;
     }
   }
   @media (max-width:768px) and (min-width:426px){
@@ -728,7 +729,42 @@ const Homepage=styled.div`
   // background-image: linear-gradient( #120440 ,#d7d6dc);
   background-image: linear-gradient(#120440,#6C8EBF); 
   left: 5%; 
-  @media (max-width:768px){
+  @media (max-width:320px){
+    left: 0;
+    width: 100%;
+    display: flex;
+    height: 150vh;
+    flex-direction: column-reverse;
+    @media (max-height:690px){
+    
+    }
+  }
+  @media (max-width:426px) and (min-width:320px){
+    left: 0;
+    width: 100%;
+    display: flex;
+    height: 150vh;
+    flex-direction: column-reverse;
+    @media (max-height:500px){
+      
+    }
+    @media (max-height:662px) and (min-height:500px){
+      height: 130vh;
+    }
+    @media (max-height:700px) and (min-height:662px){
+      height: 130vh;
+    }
+    @media (max-height:800px) and (min-height:700px){
+      height: 120vh;
+    }
+    @media (max-height:900px) and (min-height:800px){
+      height: 115vh;
+    }
+    @media (min-height:900px){
+      height: 115vh;
+    }
+  }
+  @media (max-width:768px) and (min-width:426px){
     left: 0;
     width: 100%;
     display: flex;

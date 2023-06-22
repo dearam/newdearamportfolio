@@ -1,33 +1,33 @@
 [
     {
-        "name":"Python",
-        "fullname":"Python Weather api",
+        "name":"Python Weather api",
+        "fullname":"weather api",
         "description":"Getting weather of the particular city with the use of python and OpenWeather api.It retrieve all the datas of the city and displays the weather of the city in Nextpage.",
         "technologies":["python","api","Flask"],
         "image":"./images/weather.jpg",
-        "Wlink":"",
-        "Glink":"https://github.com/dearam/CYBER-SECURITY-RAM-PRASATH"
+        "Wlink":"https://github.com/dearam/Python-weather-api",
+        "Glink":"https://github.com/dearam/Python-weather-api"
     },
     {
-        "name":"Dashboard",
-        "fullname":"Reactjs Dashboard",
+        "name":"React Dashboard",
+        "fullname":"Dashboard",
         "description":"It is a Dashboard with side navbar.Totally it contains 8 components and it has todo app.Todo app is working with the concept of Hooks.Fully Designed with jsx and css.",
         "technologies":["Html","Reactjs","Hooks"],
         "image":"./images/dashboardo.jpg",
-        "Wlink":"",
+        "Wlink":"https://github.com/dearam/dashboard",
         "Glink":"https://github.com/dearam/dashboard"
     },
     {
-        "name":"Video Search",
-        "fullname":"React Video Search",
+        "name":"React Video Search",
+        "fullname":"Video Search",
         "description":"This app is like Youtube and it's worked with the use of Youtube api.It uses Redux concepts for video retrieving fully React based app.It shows Recomended videos also on the side bar.",
         "technologies":["api","Reactjs","Redux"],
         "image":"./images/videosearcho.jpg",
-        "Wlink":"",
-        "Glink":"https://github.com/dearam/video-serch"
+        "Wlink":"https://github.com/dearam/video-search",
+        "Glink":"https://github.com/dearam/video-search"
     },
     {
-        "name":"Portfolio",
+        "name":"Old Portfolio",
         "fullname":"Old Portfolio",
         "description":"I customized my own portfolio with the help of youtube.It has 5 components with slide navbar.Whole components were working separately with css.",
         "technologies":["Reactjs","Html","Scss"],
@@ -36,26 +36,26 @@
         "Glink":"https://github.com/dearam/react-portfolio"
     },
     {
-        "name":"Audiobook",
-        "fullname":"Py Audiobook",
+        "name":"Py Audiobook",
+        "fullname":"Audiobook",
         "description":"This program working with the help of pytxt3 module.It converts the text to speech and It's retreived from ibm watson text to speech.",
         "technologies":["Python3","ibm","pytxt3"],
         "image":"./images/audiobook.jpg",
-        "Wlink":"",
+        "Wlink":"https://github.com/dearam/Audiobook-py",
         "Glink":"https://github.com/dearam/Audiobook-py"
     },
     {
-        "name":"Bus Reservation",
-        "fullname":"Bus Reservation Java",
+        "name":"Bus Reservation Java",
+        "fullname":"Bus Reservation",
         "description":"This is just projgram and it get the name,age,boarding and leaving point.With the use of those data it return the seat of their bus else show the availability of the buses.",
         "technologies":["Java8","Oops"],
         "image":"./images/busreservation.png",
-        "Wlink":"",
+        "Wlink":"https://github.com/dearam/Busreservation-java",
         "Glink":"https://github.com/dearam/Busreservation-java"
     },
     {
-        "name":"Mask Detection",
-        "fullname":"Python Mask Detection",
+        "name":"Python Mask Detection",
+        "fullname":"Mask Detection",
         "description":"Created a model for mask detection in quarantime.I used linear regression and CNN for this  model.It is working with the use of keras and opencv",
         "technologies":["Py","opencv","Keras"],
         "image":"./images/mask.jpeg",
@@ -64,25 +64,25 @@
     },
     {
         "name":"Train ticket booking",
-        "fullname":"Ticket Booking Javafx",
+        "fullname":"Ticket Booking",
         "description":"It is a desktop app for windows.It contains two main components.those login and booking pages.Whole stuff is developed with the use of javafx and mysql.",
         "technologies":["Oops","Javafx","mysql"],
         "image":"./images/train.png",
-        "Wlink":"",
+        "Wlink":"https://github.com/dearam/Login-with-Railway-javafx",
         "Glink":"https://github.com/dearam/Login-with-Railway-javafx"
     },
     {
-        "name":"Student registration",
-        "fullname":"Student Register Javafx",
+        "name":"Student registration  Javafx",
+        "fullname":"Student Register",
         "description":"It is a desktop app for windows.It contains two main components.One components is user input and another one is Database showing components.",
         "technologies":["Oops","Javafx","Jdbc"],
         "image":"./images/student.png",
-        "Wlink":"",
+        "Wlink":"https://github.com/dearam/Student_registration_jdbc",
         "Glink":"https://github.com/dearam/Student_registration_jdbc"
     },
     {
-        "name":"Disney+hotstar Clone",
-        "fullname":"Disnephotstar Clone",
+        "name":"Disney+hotstar clone",
+        "fullname":"Disney+hotstar",
         "description":"I developed Disney+hotstar clone web app with use of react and used firebase for authentication purpose.Whole design is handled by React styled components.it contains 8.",
         "technologies":["Reactjs","firebase","styled"],
         "image":"./images/disney.jpg",
@@ -90,12 +90,12 @@
         "Glink":"https://github.com/dearam/React-Disneyplus-clone"
     },
     {
-        "name":"Checkbox",
-        "fullname":"Checkbox With React",
+        "name":"Checkbox using react",
+        "fullname":"Checkbox",
         "description":"A react tree view componet and its a single component with two views.It retrieve all those datas from json file and displayed as checkbox.Checkedbox list will showed on the ther page with the count.",
         "technologies":["Reactjs","Json","styled"],
         "image":"./images/check.png",
-        "Wlink":"",
+        "Wlink":"https://github.com/dearam/Checkboxwithreact",
         "Glink":"https://github.com/dearam/Checkboxwithreact"
     }
 

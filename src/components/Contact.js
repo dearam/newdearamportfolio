@@ -99,19 +99,19 @@ function Contact() {
               </MMtitle>
               <SIcons>
                 <a href='https://github.com/dearam'>
-                  <FiGithub className='github'/>
+                  <FiGithub className='icon github'/>
                 </a>
                 <a href='https://www.linkedin.com/in/dearam/'>
-                  <FiLinkedin className='linkedin'/>
+                  <FiLinkedin className='icon linkedin'/>
                 </a>
                 <a href='https://www.instagram.com/_dearam_3/'>
-                  <FiInstagram className='instagram'/>
+                  <FiInstagram className='icon instagram'/>
                 </a>
                 <a href='https://github.com/dearam'>
-                  <FiTwitter className='twitter'/>
+                  <FiTwitter className='icon twitter'/>
                 </a>
                 <a href='https://wa.me/9360648114'>
-                  <FaWhatsapp className='whatsapp'/>
+                  <FaWhatsapp className='icon whatsapp'/>
                 </a>
                 <a href='https://open.spotify.com/user/4wakhf37namczcgnoh2ym8g5g'>
                   <FaSpotify className='spotify'/>
@@ -567,6 +567,8 @@ const SIcons=styled.div`
     @media (max-width:425px) and (min-width:320px){
       height:100%;
       width:80%;
+      height:30px;
+      width:30px;
       @media (max-height:620px){
         
       }

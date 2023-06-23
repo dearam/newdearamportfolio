@@ -4,8 +4,12 @@ import styled from 'styled-components'
 import { TbBrandPython } from "react-icons/tb";
 import { FaReact,FaJava,FaFigma,FaIndustry } from "react-icons/fa";
 import { DiJavascript } from "react-icons/di";
+import { HiDownload } from "react-icons/hi";
+import {ReactComponent as DearamLogo} from "./dearamlogo.svg";
+import Resume from "./ram_prasath_resume.pdf";
 
 function Home() {
+
   return (
     <div>
     <Homepage>
@@ -14,7 +18,7 @@ function Home() {
           <Main>
             <Hello>
                 Hey Folks<span class="wave">🐣</span>
-              </Hello>
+            </Hello>
             <Scontent>
               I'm Ram prasath Front-end Developer. My motivation and love for development as well as good design have brought me to where I am today. Every day I try to keep up with latest technology trends. I developed some basic apps with use of Reactjs. Apart from technologies I love to do digital illustration,Photographic📷 and hear songs🎶. Learn from Surroundings Earn From own Knowledge💙.
             </Scontent>
@@ -47,11 +51,18 @@ function Home() {
               </AContent>
             </Subcontent> 
           </Grid>
+          <ResumeContent>
+              <Rbutton href={Resume} download="ramprasath_resume">
+                <span>Resume</span>
+                <DearamLogo className='dearam'/>
+                <HiDownload className=''/>
+              </Rbutton>
+          </ResumeContent>
         </Content>
       </Right>
       <Left>  
         <Circle>
-          <img src='./images/dearamcircle.png' alt='dearam'/>
+          <img src='./images/modifiedcircle.png' alt='dearam'/>
         </Circle>
         <Intro>
           <Name>Ram Prasath M V</Name>
@@ -82,6 +93,59 @@ function Home() {
   )
 }
 
+const Rbutton=styled.a`
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+  position:relative;
+  font-size:14px;
+  height:20px;
+  justify-content:center;
+  padding:10px 20px 10px 20px;
+  border: 1px #fff solid;
+  border-radius:10px;
+  gap:5px;
+  background-color: #0a012a;
+  font-family:poppins;
+  color:white;
+  .dearam{
+    display:none;
+  }
+  
+  &:hover{
+    /* box-shadow: rgb(0 0 0 / 80%) 0px 26px 30px -10px,
+                    rgb(0 0 0 / 73%) 0px 16px 10px -10px ; */
+    transform: scale(1.02);
+    z-index: 1;
+    border: 2px #9E3FFD solid;
+    span{
+      display:none;
+    }
+    .dearam{
+      display:flex;
+      height:18px;
+      widht:10px;
+    }
+  }
+`;
+const ResumeContent=styled.div`
+top:5px;
+display: flex;
+position: relative;
+border-radius: 10px;
+justify-content:center;
+gap: 20px;
+color: #fff;
+@media (max-width:768px) and (min-width:500px){
+  
+}
+@media (max-width:1280px) and (min-width:769px){
+  
+}
+@media (max-width:1440px) and (min-width:1290px){
+  
+}
+`;
 const Ptitle=styled.div`
   font-size: 15px;
 `;
@@ -161,16 +225,19 @@ const Tech=styled.div`
   }
 `;
 const Main=styled.div`
+  display:flex;
+  flex-direction:column;
   position: relative;
-  margin: 30px;
-  padding: 10px;
+  top:0;
+  margin: 0px;
+  padding: 20px;
 `;
 const Hello=styled.div`
   font-size: 50px;
   font-weight: 600;
   font-family: poppins;
-  color: #fff;
-  margin: 10px 10px 50px 0px;
+  color: #fff;  
+  margin: 10px 20px 50px 20px;
   .hey{
     color:#9E3FFD;
   }
@@ -229,6 +296,7 @@ const Hello=styled.div`
 `;
 const Content=styled.div`
   position: relative;
+  height:100%;
   @media (max-width:768px){
     position: relative;
     top: -50px;
@@ -243,7 +311,7 @@ const Grid=styled.div`
   position: relative;
   margin: 0px 30px 0px 30px;
   padding: 0px 10px 0px 10px;
-  top: -40px;
+  top: -30px;
 `;
 const Subcontent=styled.div`
   display: flex;
@@ -277,13 +345,15 @@ const Subcontent=styled.div`
 const Scontent=styled.div`
   background-color: #0a012a;
   padding: 20px;
+  width:80%;
   border-radius: 10px;
   border: 1px #fff solid;
   color: #fff;
   font-weight: 600;
   font-size: 16px;
-  top: 20%;
+  top: 10%;
   position: relative;
+  margin: 0px 0px 0px 20px;
   &:hover{
     /* box-shadow: rgb(0 0 0 / 80%) 0px 26px 30px -10px,
                     rgb(0 0 0 / 73%) 0px 16px 10px -10px ; */
